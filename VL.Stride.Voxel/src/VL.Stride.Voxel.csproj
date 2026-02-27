@@ -9,8 +9,14 @@
     <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-      <PackageReference Include="Stride.Voxels" Version="$(StrideVersion)" />
+      <PackageReference Include="Stride.Voxels" Version="$(StrideVersion)" GeneratePathProperty="true" />
       <PackageReference Include="VL.Core" Version="$(VLVersion)" />
       <PackageReference Include="VL.Stride.Runtime" Version="$(VLVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="$(StrideVersion)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>build;buildTransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>
