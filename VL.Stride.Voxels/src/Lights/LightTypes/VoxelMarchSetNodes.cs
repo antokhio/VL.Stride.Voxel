@@ -6,7 +6,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// <summary>
     /// Hemisphere march set with 6 directions.
     /// </summary>
-    [ProcessNode(Name = "MarchSetHemisphere6")]
+    [ProcessNode(Name = "VoxelMarchSetHemisphere6")]
     public class MarchSetHemisphere6 : VoxelNodeImmutable<VoxelMarchSetHemisphere6>
     {
         private readonly Cachable<IVoxelMarchMethod> _marcher;
@@ -26,7 +26,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// <summary>
     /// Hemisphere march set with 12 directions.
     /// </summary>
-    [ProcessNode(Name = "MarchSetHemisphere12")]
+    [ProcessNode(Name = "VoxelMarchSetHemisphere12")]
     public class MarchSetHemisphere12 : VoxelNodeImmutable<VoxelMarchSetHemisphere12>
     {
         private readonly Cachable<IVoxelMarchMethod> _marcher;
@@ -46,7 +46,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// <summary>
     /// Randomized hemisphere march set with configurable sample count and noise animation.
     /// </summary>
-    [ProcessNode(Name = "MarchSetRandomHemisphere")]
+    [ProcessNode(Name = "VoxelMarchSetRandomHemisphere")]
     public class MarchSetRandomHemisphere : VoxelNodeImmutable<VoxelMarchSetRandomHemisphere>
     {
         private readonly Cachable<IVoxelMarchMethod> _marcher;
