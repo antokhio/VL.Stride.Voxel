@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="KHDGkpUdRLcPTpg8lXKIAC" LanguageVersion="2025.7.1-0174-g187f627d60" Version="0.128">
+  <NugetDependency Id="Fad98Medm4gO0dDvcYcve0" Location="VL.CoreLib" Version="2025.7.1-0174-g187f627d60" />
+  <Patch Id="TKsjNou4Fu0MEU6TNVj627">
+    <Canvas Id="E9xaN8Yr7alNnH71sXCwpk" DefaultCategory="Stride.Voxel" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="N8uR3tEgMVbNgXvA5Rbqov">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Ja0pdrFMQPTOaf4vhpLmES">
+        <Canvas Id="K8jsjW9fwfpLJM4QXZu209" CanvasType="Group" />
+        <Patch Id="ALJDnPWhIrDP05dhbbtEgZ" Name="Create" />
+        <Patch Id="BHpv6is9kluPluGKoZrxMa" Name="Update" />
+        <ProcessDefinition Id="VFSaUhXIyrDNmi99LRtGsH">
+          <Fragment Id="UdxFgWdmrA4OvbqMmJZIrv" Patch="ALJDnPWhIrDP05dhbbtEgZ" Enabled="true" />
+          <Fragment Id="HpcfQwWl0wkOdo4kXQDQhe" Patch="BHpv6is9kluPluGKoZrxMa" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="BdPDwu2PUyvOhT9gvKVQ4I" Location="VL.Stride" Version="2025.7.1-0174-g187f627d60" />
+  <NugetDependency Id="Qyd5oDzowCBMZuyaXP4CUq" Location="Stride.Voxels" Version="4.2.1.2487" />
+  <PlatformDependency Id="KwMQqC9rGWrMifrTwXaKzN" Location="./lib/Debug/net8.0/VL.Stride.Voxel.dll" IsForward="true" />
+</Document>

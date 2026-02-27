@@ -1,7 +1,7 @@
 ﻿using Stride.Rendering.Materials;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxel
+namespace VL.Stride.Voxels
 {
     /// <summary>
     /// Base class for vvvv nodes wrapping an external Stride datatype.

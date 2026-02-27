@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "dev/antokhio": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\vvvv\\vvvv_gamma_7.1-0174-g187f627d60-win-x64\\vvvv.exe",
+      "commandLineArgs": "--package-repositories D:\\VVVV\\VL.Stride.Voxel; ^\r\n--nuget-path D:\\\\VVVV\\\\__nugets ^\r\n--editable-packages VL.Stride.Voxel; \r\n--nocache ^\r\n--debug"
+    }
+  }
+}

@@ -42,8 +42,8 @@ public class StorageClipmaps : VoxelNodeMutable<VoxelStorageClipmaps>
         _clipMapResolution = new(this, x => x.ClipMapResolution, (x, v) => x.ClipMapResolution = v, 128f);
     }
 
-    public void SetClipMapCount(int clipMapCount = 4) => _clipMapCount.SetValue(clipMapCount);
-    public void SetClipMapResolution(float clipMapResolution = 128f) => _clipMapResolution.SetValue(clipMapResolution);
+    public void SetClipMapCount(int clipMapCount) => _clipMapCount.SetValue(clipMapCount);
+    public void SetClipMapResolution(float clipMapResolution) => _clipMapResolution.SetValue(clipMapResolution);
 }
 ```
 
@@ -60,7 +60,7 @@ public class VoxelLayout : VoxelNodeImmutable<VoxelLayoutAnisotropic>
         _resolution = new(this, x => x.Resolution, (x, v) => x.Resolution = v, 64);
     }
 
-    public void SetResolution(int resolution = 64) => _resolution.SetValue(resolution);
+    public void SetResolution(int resolution) => _resolution.SetValue(resolution);
 }
 ```
 
@@ -85,6 +85,7 @@ public class MarchCones : VoxelNodeMutable<VoxelMarchCones>
 7. **Zero allocations in Set methods** — `Cachable.SetValue` only writes when value differs.
 8. **VoxelNodeImmutable recreates** `Output` — after any `Cachable.SetValue` detects a change, `Output` is replaced with a new `TInstance` and all cached values are re-applied. This is necessary when downstream consumers compare by reference.
 9. **XML doc comments** — add `<summary>` on the class (tooltip in vvvv).
+10. **Omit explicit null defaults** — do not specify `= null` for reference type parameters in `Set*` methods, as reference types default to null implicitly.
 
 ### Cachable<T> API
 
@@ -115,4 +116,3 @@ _items.SetValue(readOnlyList);
 
 // Set single item (wraps in single-element list)
 _items.SetValue(singleItem);
-```

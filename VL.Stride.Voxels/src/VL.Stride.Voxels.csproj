@@ -7,6 +7,7 @@
     <BaseOutputPath>..\lib\</BaseOutputPath>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
       <PackageReference Include="Stride.Voxels" Version="$(StrideVersion)" GeneratePathProperty="true" />
@@ -18,5 +19,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>build;buildTransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Rendering\Light\" />
   </ItemGroup>
 </Project>
