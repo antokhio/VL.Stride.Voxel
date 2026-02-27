@@ -9,6 +9,13 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     [ProcessNode(Name = "VoxelDebug")]
     public class VoxelDebugNode : VoxelNodeMutable<VoxelDebug>
     {
-        // No Cachable fields, no Set methods — just wraps the type
+        private readonly Cachable<bool> _enabled;
+
+        public VoxelDebugNode()
+        {
+            _enabled = new(this, x => x.Enabled, (x, v) => x.Enabled = v);
+        }
+
+        public void SetEnabled(bool enabled = true) => _enabled.SetValue(enabled);
     }
 }

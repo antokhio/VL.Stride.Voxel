@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -10,9 +9,13 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-      <PackageReference Include="Stride.Voxels" Version="$(StrideVersion)" GeneratePathProperty="true" />
-      <PackageReference Include="VL.Core" Version="$(VLVersion)" />
-      <PackageReference Include="VL.Stride.Runtime" Version="$(VLVersion)" />
+    <PackageReference
+      Include="Stride.Voxels"
+      Version="$(StrideVersion)"
+      GeneratePathProperty="true"
+    />
+    <PackageReference Include="VL.Core" Version="$(VLVersion)" />
+    <PackageReference Include="VL.Stride.Runtime" Version="$(VLVersion)" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="$(StrideVersion)">
@@ -20,7 +23,14 @@
       <IncludeAssets>build;buildTransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Rendering\Light\" />
-  </ItemGroup>
+  <Target Name="_CopyStrideVoxelsAssetsLocal" AfterTargets="Build">
+    <ItemGroup>
+      <_StrideVoxelsLocalAssetFiles Include="$(PkgStride_Voxels)\stride\Assets\**\*.*" />
+    </ItemGroup>
+    <Copy
+      SourceFiles="@(_StrideVoxelsLocalAssetFiles)"
+      DestinationFiles="@(_StrideVoxelsLocalAssetFiles->'$(TargetDir)shaders\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="true"
+    />
+  </Target>
 </Project>

@@ -14,33 +14,7 @@
         <CategoryReference Kind="Category" Name="Primitive" />
       </p:NodeReference>
       <Patch Id="GyZtMEGTRBCPE6zSD7tPcL">
-        <Canvas Id="KBuWY9EOprPPexBrZ2PkcE" CanvasType="Group">
-          <Node Bounds="333,441,345,19" Id="Nx3QMmX7QyUOiLfDowa8rf">
-            <p:NodeReference LastCategoryFullName="Stride.Voxels.Rendering.Compositing" LastDependency="VL.Stride.Voxels.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="VLForwardRendererVoxel" />
-            </p:NodeReference>
-            <Pin Id="USFreo9jQBLNIw62HuEC1K" Name="Clear" Kind="InputPin" />
-            <Pin Id="J0lGK8l9m2yPhWOPJ8CWMM" Name="Opaque Render Stage" Kind="InputPin" />
-            <Pin Id="PdVTDBua7I7NFP3YaMbNYB" Name="Transparent Render Stage" Kind="InputPin" />
-            <Pin Id="JM3lhM8Wq7IPQIq5DdKRd3" Name="Shadow Map Render Stages" Kind="InputPin" />
-            <Pin Id="Hs1MiwLic0dQUC9CZNc4YZ" Name="G Buffer Render Stage" Kind="InputPin" />
-            <Pin Id="SCSrA9Gg5ZWPMGDRiRBDYv" Name="Post Effects" Kind="InputPin" />
-            <Pin Id="KeszefeUQjqNdvKvvebnTf" Name="Light Shafts" Kind="InputPin" />
-            <Pin Id="B3I9IhMYcOOMGF9MtGvnwz" Name="Vr Settings" Kind="InputPin" />
-            <Pin Id="VIQbHm22f8MNWOMlgMDvcr" Name="Viewport Settings" Kind="InputPin" />
-            <Pin Id="Fz1G8haD1dKMjQ1Wz479Ot" Name="Subsurface Scattering Blur Effect" Kind="InputPin" />
-            <Pin Id="PpJjUIWtW7qLEUTED3xASZ" Name="Msaa Level" Kind="InputPin" />
-            <Pin Id="BrzcEFRpgCgNPJZtNpdyWc" Name="Msaa Resolver" Kind="InputPin" />
-            <Pin Id="PiAfswLEn4IO5y9ZgfWsPQ" Name="Bind Depth As Resource During Transparent Rendering" Kind="InputPin" />
-            <Pin Id="Hmxawdjl9D2PszdbADP95j" Name="Bind Opaque As Resource During Transparent Rendering" Kind="InputPin" />
-            <Pin Id="Tl8uUprj2D7OQTL22WSEfY" Name="Voxel Renderer" Kind="InputPin" />
-            <Pin Id="DpyuBvzFLLELIdfpwTXG2p" Name="Voxel Visualization" Kind="InputPin" />
-            <Pin Id="SxrQnGBkF2rQK2cFM1CXqn" Name="Enabled" Kind="InputPin" />
-            <Pin Id="JzC3G1OSkACNSGy5UNLYJj" Name="Update" Kind="ApplyPin" />
-            <Pin Id="JimVsyeF7iqNqfoEIlmwHN" Name="Output" Kind="OutputPin" />
-          </Node>
-        </Canvas>
+        <Canvas Id="KBuWY9EOprPPexBrZ2PkcE" CanvasType="Group" />
         <Patch Id="VpbWvDZ0cjTM4HNqorhL6K" Name="Create" />
         <Patch Id="P3dv8qcW2dSQVF2Yyr6jaw" Name="Update" />
         <ProcessDefinition Id="N0FBHG0ANuxP2YWdy8Q23v">

@@ -22,7 +22,7 @@ namespace VL.Stride.Voxels.Rendering.Compositing
         private readonly Cachable<RenderStage> _transparentRenderStage;
         private readonly Cachable<IReadOnlyList<RenderStage>> _shadowMapRenderStages;
         private readonly Cachable<RenderStage> _gBufferRenderStage;
-        private readonly Cachable<PostProcessingEffects> _postEffects;
+        private readonly Cachable<IPostProcessingEffects> _postEffects;
         private readonly Cachable<LightShafts> _lightShafts;
         private readonly Cachable<VRRendererSettings> _vrSettings;
         private readonly Cachable<ViewportSettings> _viewportSettings;
@@ -100,7 +100,7 @@ namespace VL.Stride.Voxels.Rendering.Compositing
         public void SetGBufferRenderStage(RenderStage gBufferRenderStage) =>
             _gBufferRenderStage.SetValue(gBufferRenderStage);
 
-        public void SetPostEffects(PostProcessingEffects postEffects) =>
+        public void SetPostEffects(IPostProcessingEffects postEffects) =>
             _postEffects.SetValue(postEffects);
 
         public void SetLightShafts(LightShafts lightShafts) => _lightShafts.SetValue(lightShafts);
