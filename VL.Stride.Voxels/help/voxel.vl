@@ -1629,7 +1629,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
             </p:NodeReference>
-            <Pin Id="Ks0MDG9KM8UQax8UgoCavL" Name="Bounds" Kind="InputPin" DefaultValue="3631, 249, 1172, 625" IsHidden="true" />
+            <Pin Id="Ks0MDG9KM8UQax8UgoCavL" Name="Bounds" Kind="InputPin" DefaultValue="3631, 249, 1760, 940" IsHidden="true" />
             <Pin Id="Cq5gSK1Z9zuN0XbfNDOPi4" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
             <Pin Id="UDsXxRcPak9MILFcaF6edQ" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
             <Pin Id="IHXpjMqdXB2Lozu8sr4jIy" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
@@ -1805,9 +1805,8 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="2337,1459,157,19" Id="EmquMkZaHtCOMlo2xg4TpQ">
-            <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
+            <p:NodeReference LastCategoryFullName="Stride.Voxels.Lights.LightTypes" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="VoxelMarcher" />
               <Choice Kind="ProcessNode" Name="VoxelAttributeEmissionOpacity" />
             </p:NodeReference>
             <Pin Id="BUYvLjMm8ozO8QztGCwFqQ" Name="Light Falloff" Kind="InputPin" DefaultValue="Heuristic" />
@@ -1951,9 +1950,8 @@
             <Pin Id="SCke5OwQ5eYNG4F8xjylYt" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="2402,1954,149,19" Id="A1qxsrMQ99vO43KROPeOpO">
-            <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
+            <p:NodeReference LastCategoryFullName="Stride.Voxels.Lights.LightTypes" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="VoxelMarcher" />
               <Choice Kind="ProcessNode" Name="VoxelMarchSetHemisphere12" />
             </p:NodeReference>
             <Pin Id="P1fWTWmFQLfNjFJ8rUsTmV" Name="Marcher" Kind="InputPin" />
@@ -1961,9 +1959,8 @@
             <Pin Id="RhX0Wwy54jQPMDtCruH2ET" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="2403,1891,143,19" Id="S4Bag8pGIRrMpJVOicvTY5">
-            <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
+            <p:NodeReference LastCategoryFullName="Stride.Voxels.Lights.LightTypes" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="VoxelMarcher" />
               <Choice Kind="ProcessNode" Name="VoxelMarchConePerMipmap" />
             </p:NodeReference>
             <Pin Id="G6DBiqjZe4ePPw3KQw7P7t" Name="Steps" Kind="InputPin" />
