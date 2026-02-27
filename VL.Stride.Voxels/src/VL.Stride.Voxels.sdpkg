@@ -1,0 +1,17 @@
+!Package
+Id: d5c70ccb-8248-4faf-9df7-dfa1464df2f4
+SerializedVersion: {Assets: 3.1.0.0}
+Meta:
+  Name: VL.Stride.Voxels
+  Version: 1.0.0
+  Authors: []
+  Owners: []
+  Dependencies: null
+AssetFolders:
+    -   Path: !dir Assets
+ResourceFolders: []
+OutputGroupDirectories: {}
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets: []
