@@ -79,17 +79,27 @@ namespace VL.Stride.Voxels
 
         /// <summary>
         /// Tracks a list property. Synchronizes contents only when the sequence differs.
+        /// When a setter is provided, assigns a new list; otherwise mutates in place.
         /// </summary>
         protected class CachableList<T>
         {
             private readonly TInstance _instance;
             private readonly Func<TInstance, IList<T>> _getter;
+            private readonly Action<TInstance, IList<T>> _setter;
             private IReadOnlyList<T> _lastValue;
 
             public CachableList(VoxelNodeBase<TInstance> node, Func<TInstance, IList<T>> getter)
+                : this(node, getter, null) { }
+
+            public CachableList(
+                VoxelNodeBase<TInstance> node,
+                Func<TInstance, IList<T>> getter,
+                Action<TInstance, IList<T>> setter
+            )
             {
                 _instance = node.Output;
                 _getter = getter;
+                _setter = setter;
                 _lastValue = getter(node.Output)?.ToList() ?? [];
             }
 
@@ -100,12 +110,24 @@ namespace VL.Stride.Voxels
                 if (!SequenceEqual(_lastValue, value))
                 {
                     _lastValue = value;
-                    var current = _getter(_instance);
-                    current.Clear();
-                    if (value != null)
-                        foreach (var item in value)
-                            if (item != null)
-                                current.Add(item);
+                    if (_setter != null)
+                    {
+                        var list = new List<T>();
+                        if (value != null)
+                            foreach (var item in value)
+                                if (item != null)
+                                    list.Add(item);
+                        _setter(_instance, list);
+                    }
+                    else
+                    {
+                        var current = _getter(_instance);
+                        current.Clear();
+                        if (value != null)
+                            foreach (var item in value)
+                                if (item != null)
+                                    current.Add(item);
+                    }
                 }
             }
 
