@@ -7,15 +7,15 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Hemisphere march set with 6 directions.
     /// </summary>
     [ProcessNode(Name = "MarchSetHemisphere6")]
-    public class MarchSetHemisphere6 : VoxelNodeMutable<VoxelMarchSetHemisphere6>
+    public class MarchSetHemisphere6 : VoxelNodeImmutable<VoxelMarchSetHemisphere6>
     {
         private readonly Cachable<IVoxelMarchMethod> _marcher;
         private readonly Cachable<float> _offset;
 
         public MarchSetHemisphere6()
         {
-            _marcher = new(this, x => x.Marcher, (x, v) => x.Marcher = v);
-            _offset = new(this, x => x.Offset, (x, v) => x.Offset = v);
+            _marcher = new(this, (x, v) => x.Marcher = v);
+            _offset = new(this, (x, v) => x.Offset = v);
         }
 
         public void SetMarcher(IVoxelMarchMethod marcher) => _marcher.SetValue(marcher);
@@ -27,15 +27,15 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Hemisphere march set with 12 directions.
     /// </summary>
     [ProcessNode(Name = "MarchSetHemisphere12")]
-    public class MarchSetHemisphere12 : VoxelNodeMutable<VoxelMarchSetHemisphere12>
+    public class MarchSetHemisphere12 : VoxelNodeImmutable<VoxelMarchSetHemisphere12>
     {
         private readonly Cachable<IVoxelMarchMethod> _marcher;
         private readonly Cachable<float> _offset;
 
         public MarchSetHemisphere12()
         {
-            _marcher = new(this, x => x.Marcher, (x, v) => x.Marcher = v);
-            _offset = new(this, x => x.Offset, (x, v) => x.Offset = v);
+            _marcher = new(this, (x, v) => x.Marcher = v);
+            _offset = new(this, (x, v) => x.Offset = v);
         }
 
         public void SetMarcher(IVoxelMarchMethod marcher) => _marcher.SetValue(marcher);
@@ -47,7 +47,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Randomized hemisphere march set with configurable sample count and noise animation.
     /// </summary>
     [ProcessNode(Name = "MarchSetRandomHemisphere")]
-    public class MarchSetRandomHemisphere : VoxelNodeMutable<VoxelMarchSetRandomHemisphere>
+    public class MarchSetRandomHemisphere : VoxelNodeImmutable<VoxelMarchSetRandomHemisphere>
     {
         private readonly Cachable<IVoxelMarchMethod> _marcher;
         private readonly Cachable<int> _count;
@@ -55,9 +55,9 @@ namespace VL.Stride.Voxels.Lights.LightTypes
 
         public MarchSetRandomHemisphere()
         {
-            _marcher = new(this, x => x.Marcher, (x, v) => x.Marcher = v);
-            _count = new(this, x => x.Count, (x, v) => x.Count = v, 6);
-            _animateNoise = new(this, x => x.AnimateNoise, (x, v) => x.AnimateNoise = v, false);
+            _marcher = new(this, (x, v) => x.Marcher = v);
+            _count = new(this, (x, v) => x.Count = v, 6);
+            _animateNoise = new(this, (x, v) => x.AnimateNoise = v, false);
         }
 
         public void SetMarcher(IVoxelMarchMethod marcher) => _marcher.SetValue(marcher);

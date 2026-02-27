@@ -8,7 +8,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Voxelization along a single configurable axis.
     /// </summary>
     [ProcessNode(Name = "VoxelizationMethodSingleAxis")]
-    public class VoxelizationMethodSingleAxisNode : VoxelNodeMutable<VoxelizationMethodSingleAxis>
+    public class VoxelizationMethodSingleAxisNode : VoxelNodeImmutable<VoxelizationMethodSingleAxis>
     {
         private readonly Cachable<VoxelizationMethodSingleAxis.Axis> _voxelizationAxis;
 
@@ -16,7 +16,6 @@ namespace VL.Stride.Voxels.Lights.LightTypes
         {
             _voxelizationAxis = new(
                 this,
-                x => x.VoxelizationAxis,
                 (x, v) => x.VoxelizationAxis = v,
                 VoxelizationMethodSingleAxis.Axis.Y
             );
@@ -32,18 +31,13 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// </summary>
     [ProcessNode(Name = "VoxelizationMethodDominantAxis")]
     public class VoxelizationMethodDominantAxisNode
-        : VoxelNodeMutable<VoxelizationMethodDominantAxis>
+        : VoxelNodeImmutable<VoxelizationMethodDominantAxis>
     {
         private readonly Cachable<MultisampleCount> _multisampleCount;
 
         public VoxelizationMethodDominantAxisNode()
         {
-            _multisampleCount = new(
-                this,
-                x => x.MultisampleCount,
-                (x, v) => x.MultisampleCount = v,
-                MultisampleCount.X8
-            );
+            _multisampleCount = new(this, (x, v) => x.MultisampleCount = v, MultisampleCount.X8);
         }
 
         public void SetMultisampleCount(MultisampleCount multisampleCount = MultisampleCount.X8) =>
@@ -54,18 +48,13 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Voxelization along all three axes with configurable multisampling.
     /// </summary>
     [ProcessNode(Name = "VoxelizationMethodTriAxis")]
-    public class VoxelizationMethodTriAxisNode : VoxelNodeMutable<VoxelizationMethodTriAxis>
+    public class VoxelizationMethodTriAxisNode : VoxelNodeImmutable<VoxelizationMethodTriAxis>
     {
         private readonly Cachable<MultisampleCount> _multisampleCount;
 
         public VoxelizationMethodTriAxisNode()
         {
-            _multisampleCount = new(
-                this,
-                x => x.MultisampleCount,
-                (x, v) => x.MultisampleCount = v,
-                MultisampleCount.X8
-            );
+            _multisampleCount = new(this, (x, v) => x.MultisampleCount = v, MultisampleCount.X8);
         }
 
         public void SetMultisampleCount(MultisampleCount multisampleCount = MultisampleCount.X8) =>

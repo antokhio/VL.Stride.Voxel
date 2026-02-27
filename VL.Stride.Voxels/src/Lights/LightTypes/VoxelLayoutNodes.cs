@@ -7,26 +7,18 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Anisotropic voxel layout storing directional data.
     /// </summary>
     [ProcessNode(Name = "VoxelLayoutAnisotropic")]
-    public class VoxelLayoutAnisotropicNode : VoxelNodeMutable<VoxelLayoutAnisotropic>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+    public class VoxelLayoutAnisotropicNode : VoxelNodeImmutable<VoxelLayoutAnisotropic> { }
 
     /// <summary>
     /// Paired anisotropic voxel layout storing opposing directional data.
     /// </summary>
     [ProcessNode(Name = "VoxelLayoutAnisotropicPaired")]
-    public class VoxelLayoutAnisotropicPairedNode : VoxelNodeMutable<VoxelLayoutAnisotropicPaired>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+    public class VoxelLayoutAnisotropicPairedNode
+        : VoxelNodeImmutable<VoxelLayoutAnisotropicPaired> { }
 
     /// <summary>
     /// Isotropic voxel layout storing omnidirectional data.
     /// </summary>
     [ProcessNode(Name = "VoxelLayoutIsotropic")]
-    public class VoxelLayoutIsotropicNode : VoxelNodeMutable<VoxelLayoutIsotropic>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+    public class VoxelLayoutIsotropicNode : VoxelNodeImmutable<VoxelLayoutIsotropic> { }
 }

@@ -7,8 +7,5 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Voxel volume component for configuring voxelization.
     /// </summary>
     [ProcessNode(Name = "VoxelVolumeComponent")]
-    public class VoxelVolumeComponentNode : VoxelNodeMutable<VoxelVolumeComponent>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+    public class VoxelVolumeComponentNode : VoxelNodeImmutable<VoxelVolumeComponent> { }
 }

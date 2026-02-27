@@ -7,8 +7,5 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Clipmap-based voxel storage.
     /// </summary>
     [ProcessNode(Name = "VoxelStorageClipmaps")]
-    public class VoxelStorageClipmapsNode : VoxelNodeMutable<VoxelStorageClipmaps>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+    public class VoxelStorageClipmapsNode : VoxelNodeImmutable<VoxelStorageClipmaps> { }
 }

@@ -7,8 +7,5 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Indirect storage method for voxel data.
     /// </summary>
     [ProcessNode(Name = "VoxelStorageMethodIndirect")]
-    public class VoxelStorageMethodIndirectNode : VoxelNodeMutable<VoxelStorageMethodIndirect>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+    public class VoxelStorageMethodIndirectNode : VoxelNodeImmutable<VoxelStorageMethodIndirect> { }
 }

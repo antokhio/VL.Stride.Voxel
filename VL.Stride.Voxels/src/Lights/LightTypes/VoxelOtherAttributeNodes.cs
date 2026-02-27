@@ -8,17 +8,11 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// </summary>
     [ProcessNode(Name = "VoxelAttributeDirectionalCoverage")]
     public class VoxelAttributeDirectionalCoverageNode
-        : VoxelNodeMutable<VoxelAttributeDirectionalCoverage>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+        : VoxelNodeImmutable<VoxelAttributeDirectionalCoverage> { }
 
     /// <summary>
     /// Voxel attribute for solidity data.
     /// </summary>
     [ProcessNode(Name = "VoxelAttributeSolidity")]
-    public class VoxelAttributeSolidityNode : VoxelNodeMutable<VoxelAttributeSolidity>
-    {
-        // No Cachable fields, no Set methods — just wraps the type
-    }
+    public class VoxelAttributeSolidityNode : VoxelNodeImmutable<VoxelAttributeSolidity> { }
 }
