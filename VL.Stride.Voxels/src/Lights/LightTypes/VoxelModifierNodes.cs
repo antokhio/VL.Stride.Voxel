@@ -17,12 +17,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _enabled = new(this, (x, v) => x.Enabled = v, true);
         }
 
-        public void SetEnabled(bool enabled = true)
-        {
-            _enabled.SetValue(enabled);
-            if (IsDirty)
-                Rebuild(instance => _enabled.ApplyTo(instance));
-        }
+        public void SetEnabled(bool enabled = true) => _enabled.SetValue(enabled);
     }
 
     /// <summary>
@@ -39,12 +34,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _enabled = new(this, (x, v) => x.Enabled = v, true);
         }
 
-        public void SetEnabled(bool enabled = true)
-        {
-            _enabled.SetValue(enabled);
-            if (IsDirty)
-                Rebuild(instance => _enabled.ApplyTo(instance));
-        }
+        public void SetEnabled(bool enabled = true) => _enabled.SetValue(enabled);
     }
 
     /// <summary>
@@ -61,11 +51,6 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _enabled = new(this, (x, v) => x.Enabled = v, true);
         }
 
-        public void SetEnabled(bool enabled = true)
-        {
-            _enabled.SetValue(enabled);
-            if (IsDirty)
-                Rebuild(instance => _enabled.ApplyTo(instance));
-        }
+        public void SetEnabled(bool enabled = true) => _enabled.SetValue(enabled);
     }
 }

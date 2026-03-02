@@ -1624,56 +1624,6 @@
       </p:NodeReference>
       <Patch Id="GyZtMEGTRBCPE6zSD7tPcL">
         <Canvas Id="KBuWY9EOprPPexBrZ2PkcE" CanvasType="Group">
-          <Node Bounds="1454,3322,205,19" Id="ICY11zUg3LkNnGlegwkEEm">
-            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
-            </p:NodeReference>
-            <Pin Id="Ks0MDG9KM8UQax8UgoCavL" Name="Bounds" Kind="InputPin" DefaultValue="3631, 249, 1760, 940" IsHidden="true" />
-            <Pin Id="Cq5gSK1Z9zuN0XbfNDOPi4" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
-            <Pin Id="UDsXxRcPak9MILFcaF6edQ" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
-            <Pin Id="IHXpjMqdXB2Lozu8sr4jIy" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Fqg7msarVNKMvPPSpTFQiF" Name="Back Buffer Format" Kind="InputPin" IsHidden="true" />
-            <Pin Id="TiJMNAHSxu4PgH5XglIjId" Name="Depth Buffer Format" Kind="InputPin" IsHidden="true" />
-            <Pin Id="BsjlIVVTd61LyLOaIphqaX" Name="Input Priority" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Dfr5biPcK1zMbrGo0jXC9i" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="FSt9Zt4xfXkMyIjTDaBAX6" Name="Always On Top" Kind="InputPin" IsHidden="true" />
-            <Pin Id="AxRtpMVp6dZMI3QSTehE1F" Name="Extend Into Title Bar" Kind="InputPin" IsHidden="true" />
-            <Pin Id="PFkmyMEHyKPNRK3cWb9EfY" Name="Input" Kind="InputPin" />
-            <Pin Id="VGt8o0yKK44LRFLvFBLnEl" Name="Camera" Kind="InputPin" />
-            <Pin Id="JtM6aCBatIqOrDfcPHgniW" Name="Enable Default Camera" Kind="InputPin" />
-            <Pin Id="UbqKnN6OsNhM5TebtFkJmD" Name="Title" Kind="InputPin" />
-            <Pin Id="Q4CyWnntCv9PabI08MG2kV" Name="Title Bar Interaction Width" Kind="InputPin" IsHidden="true" />
-            <Pin Id="A1MWSzLojRVPd0vxpDBdcD" Name="Clear Color" Kind="InputPin" />
-            <Pin Id="JCG9imj6yHyPvgTPTBaUts" Name="Clear" Kind="InputPin" />
-            <Pin Id="M5Xf7PuDFtkLstNhgrXF2K" Name="Post Effects" Kind="InputPin" />
-            <Pin Id="QSqC6UMDJzbOIxjsBjvUUx" Name="Enable Default Post Effects" Kind="InputPin" DefaultValue="True" />
-            <Pin Id="Fj4WtTNecx8QU0mHIwHfjK" Name="Render Group Mask" Kind="InputPin" IsHidden="true" />
-            <Pin Id="MKspKVw5KvoOp3SpAtK28j" Name="Commands" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Dcvl0SDmru1OGuYJYCraJ0" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
-            <Pin Id="B7EEGTlR28EMQQRyZ4LsWp" Name="Model Effect Name" Kind="InputPin" IsHidden="true" />
-            <Pin Id="E14UWx6FwsHPEZol3EqCM5" Name="Additional Scene Renderers" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Ek6qIAQMGKoOT9vsRSav1c" Name="Enabled" Kind="InputPin" />
-            <Pin Id="Rrm9xDZG6XNPZ39CTTOKgT" Name="Input Source" Kind="InputPin" IsHidden="true" />
-            <Pin Id="R6PyiVjnFN4LJUSlfnVg7K" Name="Present Interval" Kind="InputPin" />
-            <Pin Id="CA7jnHFs859MmXPY0NxFF0" Name="Output" Kind="OutputPin" />
-            <Pin Id="Ix1bk8KrXjtLQQMaOrqPg1" Name="Client Bounds" Kind="OutputPin" />
-            <Pin Id="CzjumXMbZFgN7mlNDP9sF6" Name="Input Source" Kind="OutputPin" />
-            <Pin Id="U9kvmS2Bm8QL3pr2uB810A" Name="MSAALevel" Kind="InputPin" IsHidden="true" />
-            <Pin Id="BjFIxpFl2I6PDJwcVYeQ5S" Name="MSAAResolver" Kind="InputPin" IsHidden="true" />
-            <Pin Id="VhEDEYiASaTLhPzbxMZ8M7" Name="Light Shafts" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Oc4uVwU1Pl2MzTgNzpqYVN" Name="VR Settings" Kind="InputPin" IsHidden="true" />
-            <Pin Id="VG524h5mefQLU8FcVMh1A2" Name="Viewport Settings" Kind="InputPin" IsHidden="true" />
-            <Pin Id="TUx9ByZ8JcqMGibFFnIPJN" Name="Subsurface Scattering Blur Settings" Kind="InputPin" IsHidden="true" />
-            <Pin Id="JSNxkkGfRjpMDutAKasPI6" Name="Bind Depth As Resource During Transparent Rendering" Kind="InputPin" IsHidden="true" />
-            <Pin Id="LLTCaOs2zK7P07oV6nxDOv" Name="Present Call Intercept" Kind="InputPin" IsHidden="true" />
-            <Pin Id="OmPrnddwc1TOrQiMGVH5Ss" Name="Output Color Space" Kind="InputPin" IsHidden="true" />
-            <Pin Id="HuszZWcSvu1OmpTiRzBLol" Name="Backbuffer Format" Kind="InputPin" IsHidden="true" />
-            <Pin Id="GS8Y2Uzz15OK95otJtBYAa" Name="Bind Opaque As Resource During Transparent Rendering" Kind="InputPin" DefaultValue="False" IsHidden="true" />
-            <Pin Id="AIO67ERJjPMNwDFKg7CfMq" Name="Debug Voxels" Kind="InputPin" DefaultValue="False" IsHidden="true" />
-            <Pin Id="TX08PdwnJVmMqtDdXNLojx" Name="Back Buffer" Kind="OutputPin" IsHidden="true" />
-            <Pin Id="BCmzuyEIKR8PXTptzJoM8H" Name="Depth Buffer" Kind="OutputPin" IsHidden="true" />
-          </Node>
           <Node Bounds="1333,3191,284,19" Id="OSuTJWDDNIRLlZClwkBYJ5">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1809,10 +1759,10 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelAttributeEmissionOpacity" />
             </p:NodeReference>
-            <Pin Id="BUYvLjMm8ozO8QztGCwFqQ" Name="Light Falloff" Kind="InputPin" DefaultValue="Heuristic" />
-            <Pin Id="F0e6cwHpivuOS1vMDUau2K" Name="Modifiers" Kind="InputPin" />
             <Pin Id="L6hjUMFNuG3NeEie729SJ0" Name="Voxel Layout" Kind="InputPin" />
             <Pin Id="M8fcvwcGca0PNdk4ahGxra" Name="Output" Kind="OutputPin" />
+            <Pin Id="F0e6cwHpivuOS1vMDUau2K" Name="Modifiers" Kind="InputPin" />
+            <Pin Id="BUYvLjMm8ozO8QztGCwFqQ" Name="Light Falloff" Kind="InputPin" DefaultValue="Heuristic" />
           </Node>
           <Node Bounds="1662,1549,171,19" Id="Ij7Jtkx8xU5MYWT3KC0DdN">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
@@ -1922,18 +1872,19 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelLayoutIsotropic" />
             </p:NodeReference>
-            <Pin Id="TPIh0KfF9BQLzlGkaZLvc1" Name="Storage Format" Kind="InputPin" DefaultValue="RGBA16F" />
+            <Pin Id="HwIYpdrh1RLQIQWMa9orfk" Name="Max Brightness" Kind="InputPin" />
             <Pin Id="TgwjREuY5hBPR5p6HyBXUH" Name="Storage Method" Kind="InputPin" />
             <Pin Id="Vke9QKeKrgTMq69iHvfI5V" Name="Output" Kind="OutputPin" />
+            <Pin Id="TPIh0KfF9BQLzlGkaZLvc1" Name="Storage Format" Kind="InputPin" DefaultValue="RGBA16F" />
           </Node>
           <Node Bounds="2666,1285,145,19" Id="BMch32pumtrMcNzu8WrIga">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelStorageMethodIndirect" />
             </p:NodeReference>
-            <Pin Id="J4qflZ1qSefLqzOvZy2OiL" Name="Filter" Kind="InputPin" />
             <Pin Id="RyRvKJP1OkpOSYLjAzLBRc" Name="Temp Storage Format" Kind="InputPin" />
             <Pin Id="NSgHofaqiDbPMSitoqr33D" Name="Output" Kind="OutputPin" />
+            <Pin Id="J4qflZ1qSefLqzOvZy2OiL" Name="Filter" Kind="InputPin" />
           </Node>
           <Node Bounds="2806,1239,181,19" Id="IcGozzYbAFDL1MIGomGBoD">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
@@ -2068,16 +2019,20 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelLayoutAnisotropicPaired" />
             </p:NodeReference>
+            <Pin Id="PWDx01S686cLHYFWZN2ZWN" Name="Max Brightness" Kind="InputPin" />
             <Pin Id="Ht522SOUTe6PXSRksz5ref" Name="Storage Method" Kind="InputPin" />
             <Pin Id="QyZQpHcK5XHPUvx0aWY3zb" Name="Output" Kind="OutputPin" />
+            <Pin Id="FKgnhCyfa2dNApeVmSagw8" Name="Storage Format" Kind="InputPin" />
           </Node>
           <Node Bounds="2876,1351,124,19" Id="G3ivt5p6czXPKmMkrelW3a">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelLayoutAnisotropic" />
             </p:NodeReference>
+            <Pin Id="INSKmMJ2XpkM0ea38Khy5w" Name="Max Brightness" Kind="InputPin" />
             <Pin Id="Pb9X1LDtO9lP8na1sqkW9i" Name="Storage Method" Kind="InputPin" />
             <Pin Id="HcdNCTJi3BTMQRUMivejjv" Name="Output" Kind="OutputPin" />
+            <Pin Id="U1uoAionrfWLSS5vzAKBTe" Name="Storage Format" Kind="InputPin" />
           </Node>
           <Node Bounds="1855,1547,154,19" Id="ToCU2gO4fhpQZ7JLTN5aqe">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
@@ -2152,6 +2107,7 @@
               <Choice Kind="ProcessNode" Name="VoxelModifierEmissionOpacityAntiAliasing" />
             </p:NodeReference>
             <Pin Id="RRlhDDZidaiLxwcLFuenFe" Name="Output" Kind="OutputPin" />
+            <Pin Id="GFz6NerVLnoPYdSaqYZtP3" Name="Enabled" Kind="InputPin" />
           </Node>
           <Node Bounds="2336,1132,188,19" Id="NF2aTjrwyYmPKLEuARf7zV">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
@@ -2159,6 +2115,7 @@
               <Choice Kind="ProcessNode" Name="VoxelModifierEmissionOpacityOpacify" />
             </p:NodeReference>
             <Pin Id="Jv8iRwqWkCNOpwnh5NMnw6" Name="Output" Kind="OutputPin" />
+            <Pin Id="DV59Wk92qxmMaNni4an5c1" Name="Enabled" Kind="InputPin" />
           </Node>
           <Node Bounds="2546,1130,187,19" Id="Kv9jmZ4sBmUNf0P555lch7">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
@@ -2166,6 +2123,7 @@
               <Choice Kind="ProcessNode" Name="VoxelModifierEmissionOpacitySolidify" />
             </p:NodeReference>
             <Pin Id="SKFpZ4KY90hOvOOeg1YGbv" Name="Output" Kind="OutputPin" />
+            <Pin Id="NRklEOgWibiONxnVACJuq4" Name="Enabled" Kind="InputPin" />
           </Node>
           <Node Bounds="2421,1188,45,19" Id="VzIvWAr1n0QOferQTv2BuT">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
@@ -2365,7 +2323,6 @@
             <Pin Id="RrGR99XDJPJLvlcvpUfZiS" Name="Camera Component" Kind="OutputPin" />
             <Pin Id="KDLLJMEbZ2tLDI5R1kPWQi" Name="Interest" Kind="OutputPin" />
           </Node>
-          <Pad Id="BopMKQDN76JOjls8rHAI5I" Comment="Client Bounds" Bounds="1556,3466,241,166" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="VpbWvDZ0cjTM4HNqorhL6K" Name="Create" />
         <Patch Id="P3dv8qcW2dSQVF2Yyr6jaw" Name="Update" ParticipatingElements="GPJvYl3HjGoLfldTBaQSMH" />
@@ -2373,7 +2330,6 @@
           <Fragment Id="UvmeuhtQxHpLi03mSNbNCq" Patch="VpbWvDZ0cjTM4HNqorhL6K" Enabled="true" />
           <Fragment Id="QrXhtzhRY95PMGE5gk5qfn" Patch="P3dv8qcW2dSQVF2Yyr6jaw" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="Kku9mDBcZxyOs4UacNzIpj" Ids="VNU2uqQzCGpMANFOHCdvsH,PFkmyMEHyKPNRK3cWb9EfY" />
         <Link Id="E4hTGLSqXvVLotra8XRKn8" Ids="MEl90HFlwwlPB8SB14BYJl,KmOaDbQKpCdLf2BKoTktgm" />
         <Link Id="NL8L5D3ghcmOY41UJtYHg2" Ids="UKLp176Hh5zLiBktKhuaGj,VJd7nfKsLORQIRQ7F5Oymw" />
         <Link Id="K2Yuvu6JyAvNKDbI0xgA45" Ids="NSPCdMvmEPbMSVfeV2kauj,AU0p2m6vbvVNLhPOg8zKSx" />
@@ -2445,8 +2401,6 @@
         <Link Id="Jr34RB5IGoRNi76CkfdC93" Ids="N9NKyfNqi8SLoIonFFG38Y,VwZCORwmxN1NKsgMI4CCYl" />
         <Link Id="JvU0tY4UH14Ow8EiKI8FMy" Ids="RcHXfOjeyXpMi3TruuEDeL,RvfcYrNQgHlM0rAbqtzNpF" />
         <Link Id="JeeXmShtRGmOmTWwcJ8yt3" Ids="M9qC6S9CUc1MTNOWaQx9cy,NLc6lPuZWanLIeL1wXRfZS" />
-        <Link Id="SIBAfp2qhlYNyKckyrvETw" Ids="UiNCfdzkveZLYOC8hgBQnm,VGt8o0yKK44LRFLvFBLnEl" />
-        <Link Id="VAdUb3n5UrJNXa72XM7Y7Z" Ids="Ix1bk8KrXjtLQQMaOrqPg1,BopMKQDN76JOjls8rHAI5I" />
         <Link Id="JU0f9yKz8cDNAXZ7SB9E42" Ids="NVaQIlgxg9oOhT3anchfHw,A6YGiOqyAnFQHKQDRkeIq7" />
         <Link Id="FCYIQsbHIZoMPOvJPdCXeZ" Ids="PGT7d3Ono6NPtfQjIbRXnN,HffHurSeFSJNCBsCFpbdlm" />
         <Link Id="HJpvnoDuZL0LQjoZpnQYve" Ids="Af5xpeVpV5jNP4mf1SBpKm,PGzNjqDQPy9N9RYbrBINdj" />

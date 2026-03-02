@@ -175,11 +175,16 @@ namespace VL.Stride.Voxels
         where TInstance : new()
     {
         private bool _isDirty = true;
+        private readonly List<Action<TInstance>> _applicators = new();
 
-        /// <summary>Whether any input changed since last rebuild.</summary>
+        /// <summary>
+        /// Whether any input changed since last rebuild.
+        /// </summary>
         protected bool IsDirty => _isDirty;
 
-        /// <summary>Signal that a rebuild is needed.</summary>
+        /// <summary>
+        /// Signal that a rebuild is needed.
+        /// </summary>
         protected void MarkDirty() => _isDirty = true;
 
         /// <summary>
@@ -211,6 +216,13 @@ namespace VL.Stride.Voxels
                             : EqualityComparer<T>.Default.Equals
                     );
                 _lastValue = initialValue;
+
+                // AUTO-REGISTER: Tell the parent node how to apply this value during Update()
+                _node._applicators.Add(instance =>
+                {
+                    if (_lastValue is not null)
+                        _setter(instance, _lastValue);
+                });
             }
 
             public T LastValue => _lastValue;
@@ -223,21 +235,36 @@ namespace VL.Stride.Voxels
                     _node.MarkDirty();
                 }
             }
-
-            /// <summary>Apply the cached value to a fresh instance.</summary>
-            public void ApplyTo(TInstance instance) => _setter(instance, _lastValue);
         }
 
         /// <summary>
-        /// Create a fresh TInstance, apply all cached values via <paramref name="configure"/>,
-        /// assign to Output, and clear the dirty flag.
+        /// Called automatically by vvvv/vl. Creates a fresh TInstance and applies
+        /// all registered cached values if the node is marked as dirty.
         /// </summary>
-        protected void Rebuild(Action<TInstance> configure = null)
+        public void Update()
         {
+            if (!_isDirty)
+                return;
+
             var instance = new TInstance();
-            configure?.Invoke(instance);
+
+            // Automatically apply all properties that were registered by Cachable
+            foreach (var apply in _applicators)
+            {
+                apply(instance);
+            }
+
+            // Optional hook for nodes that have complex logic beyond standard property setting
+            OnBuildInstance(instance);
+
             Output = instance;
             _isDirty = false;
         }
+
+        /// <summary>
+        /// Override this ONLY if you have custom initialization logic that cannot be handled
+        /// by standard Cachable properties. Empty by default.
+        /// </summary>
+        protected virtual void OnBuildInstance(TInstance instance) { }
     }
 }

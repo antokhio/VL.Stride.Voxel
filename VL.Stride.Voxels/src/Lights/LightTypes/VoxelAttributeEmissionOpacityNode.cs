@@ -22,37 +22,12 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _lightFalloff = new(this, (x, v) => x.LightFalloff = v, LightFalloffs.Heuristic);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                // Preserve Stride default (new VoxelLayoutIsotropic()) if unset
-                if (_voxelLayout.LastValue is not null)
-                    _voxelLayout.ApplyTo(instance);
-                if (_modifiers.LastValue is not null)
-                    _modifiers.ApplyTo(instance);
-                _lightFalloff.ApplyTo(instance);
-            });
-        }
+        public void SetVoxelLayout(IVoxelLayout voxelLayout) => _voxelLayout.SetValue(voxelLayout);
 
-        public void SetVoxelLayout(IVoxelLayout voxelLayout)
-        {
-            _voxelLayout.SetValue(voxelLayout);
-            RebuildIfDirty();
-        }
-
-        public void SetModifiers(IReadOnlyList<VoxelModifierEmissionOpacity> modifiers)
-        {
+        public void SetModifiers(IReadOnlyList<VoxelModifierEmissionOpacity> modifiers) =>
             _modifiers.SetValue(modifiers);
-            RebuildIfDirty();
-        }
 
-        public void SetLightFalloff(LightFalloffs lightFalloff = LightFalloffs.Heuristic)
-        {
+        public void SetLightFalloff(LightFalloffs lightFalloff = LightFalloffs.Heuristic) =>
             _lightFalloff.SetValue(lightFalloff);
-            RebuildIfDirty();
-        }
     }
 }

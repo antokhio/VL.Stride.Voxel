@@ -21,36 +21,14 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _storageFormat = new(this, (x, v) => x.StorageFormat = v, StorageFormats.RGBA16F);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                _maxBrightness.ApplyTo(instance);
-                if (_storageMethod.LastValue is not null)
-                    _storageMethod.ApplyTo(instance);
-                _storageFormat.ApplyTo(instance);
-            });
-        }
-
-        public void SetMaxBrightness(float maxBrightness = 10.0f)
-        {
+        public void SetMaxBrightness(float maxBrightness = 10.0f) =>
             _maxBrightness.SetValue(maxBrightness);
-            RebuildIfDirty();
-        }
 
-        public void SetStorageMethod(IVoxelStorageMethod storageMethod)
-        {
+        public void SetStorageMethod(IVoxelStorageMethod storageMethod) =>
             _storageMethod.SetValue(storageMethod);
-            RebuildIfDirty();
-        }
 
-        public void SetStorageFormat(StorageFormats storageFormat = StorageFormats.RGBA16F)
-        {
+        public void SetStorageFormat(StorageFormats storageFormat = StorageFormats.RGBA16F) =>
             _storageFormat.SetValue(storageFormat);
-            RebuildIfDirty();
-        }
     }
 
     /// <summary>
@@ -70,36 +48,14 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _storageFormat = new(this, (x, v) => x.StorageFormat = v, StorageFormats.RGBA16F);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                _maxBrightness.ApplyTo(instance);
-                if (_storageMethod.LastValue is not null)
-                    _storageMethod.ApplyTo(instance);
-                _storageFormat.ApplyTo(instance);
-            });
-        }
-
-        public void SetMaxBrightness(float maxBrightness = 10.0f)
-        {
+        public void SetMaxBrightness(float maxBrightness = 10.0f) =>
             _maxBrightness.SetValue(maxBrightness);
-            RebuildIfDirty();
-        }
 
-        public void SetStorageMethod(IVoxelStorageMethod storageMethod)
-        {
+        public void SetStorageMethod(IVoxelStorageMethod storageMethod) =>
             _storageMethod.SetValue(storageMethod);
-            RebuildIfDirty();
-        }
 
-        public void SetStorageFormat(StorageFormats storageFormat = StorageFormats.RGBA16F)
-        {
+        public void SetStorageFormat(StorageFormats storageFormat = StorageFormats.RGBA16F) =>
             _storageFormat.SetValue(storageFormat);
-            RebuildIfDirty();
-        }
     }
 
     /// <summary>
@@ -119,35 +75,13 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _storageFormat = new(this, (x, v) => x.StorageFormat = v, StorageFormats.RGBA16F);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                _maxBrightness.ApplyTo(instance);
-                if (_storageMethod.LastValue is not null)
-                    _storageMethod.ApplyTo(instance);
-                _storageFormat.ApplyTo(instance);
-            });
-        }
-
-        public void SetMaxBrightness(float maxBrightness = 10.0f)
-        {
+        public void SetMaxBrightness(float maxBrightness = 10.0f) =>
             _maxBrightness.SetValue(maxBrightness);
-            RebuildIfDirty();
-        }
 
-        public void SetStorageMethod(IVoxelStorageMethod storageMethod)
-        {
+        public void SetStorageMethod(IVoxelStorageMethod storageMethod) =>
             _storageMethod.SetValue(storageMethod);
-            RebuildIfDirty();
-        }
 
-        public void SetStorageFormat(StorageFormats storageFormat = StorageFormats.RGBA16F)
-        {
+        public void SetStorageFormat(StorageFormats storageFormat = StorageFormats.RGBA16F) =>
             _storageFormat.SetValue(storageFormat);
-            RebuildIfDirty();
-        }
     }
 }

@@ -28,39 +28,16 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _downsampleFinerClipMaps = new(this, (x, v) => x.DownsampleFinerClipMaps = v, true);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                _clipResolution.ApplyTo(instance);
-                _updatesPerFrame.ApplyTo(instance);
-                _downsampleFinerClipMaps.ApplyTo(instance);
-            });
-        }
-
         public void SetClipResolution(
             VoxelStorageClipmaps.Resolutions clipResolution = VoxelStorageClipmaps.Resolutions.x128
-        )
-        {
-            _clipResolution.SetValue(clipResolution);
-            RebuildIfDirty();
-        }
+        ) => _clipResolution.SetValue(clipResolution);
 
         public void SetUpdatesPerFrame(
             VoxelStorageClipmaps.UpdateMethods updatesPerFrame =
                 VoxelStorageClipmaps.UpdateMethods.SingleClipmap
-        )
-        {
-            _updatesPerFrame.SetValue(updatesPerFrame);
-            RebuildIfDirty();
-        }
+        ) => _updatesPerFrame.SetValue(updatesPerFrame);
 
-        public void SetDownsampleFinerClipMaps(bool downsampleFinerClipMaps = true)
-        {
+        public void SetDownsampleFinerClipMaps(bool downsampleFinerClipMaps = true) =>
             _downsampleFinerClipMaps.SetValue(downsampleFinerClipMaps);
-            RebuildIfDirty();
-        }
     }
 }
