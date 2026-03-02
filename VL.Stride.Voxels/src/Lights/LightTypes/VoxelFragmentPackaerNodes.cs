@@ -7,18 +7,18 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Packs voxel fragment data as float16.
     /// </summary>
     [ProcessNode(Name = "VoxelFragmentPackFloat16")]
-    public class VoxelFragmentPackFloat16Node : VoxelNodeImmutable<VoxelFragmentPackFloat16> { }
+    public class VoxelFragmentPackFloat16Node : VoxelNodeMutable<VoxelFragmentPackFloat16> { }
 
     /// <summary>
     /// Packs voxel fragment data as float32.
     /// </summary>
     [ProcessNode(Name = "VoxelFragmentPackFloat32")]
-    public class VoxelFragmentPackFloat32Node : VoxelNodeImmutable<VoxelFragmentPackFloat32> { }
+    public class VoxelFragmentPackFloat32Node : VoxelNodeMutable<VoxelFragmentPackFloat32> { }
 
     /// <summary>
     /// Packs voxel fragment data as R11G11B10 float.
     /// </summary>
     [ProcessNode(Name = "VoxelFragmentPackFloatR11G11B10")]
     public class VoxelFragmentPackFloatR11G11B10Node
-        : VoxelNodeImmutable<VoxelFragmentPackFloatR11G11B10> { }
+        : VoxelNodeMutable<VoxelFragmentPackFloatR11G11B10> { }
 }

@@ -40,6 +40,7 @@ namespace VL.Stride.Voxels.Rendering.Compositing
             _clear = new(this, (x, v) => x.Clear = v);
             _opaqueRenderStage = new(this, (x, v) => x.OpaqueRenderStage = v);
             _transparentRenderStage = new(this, (x, v) => x.TransparentRenderStage = v);
+
             _shadowMapRenderStages = new(
                 this,
                 (x, v) =>
@@ -51,6 +52,7 @@ namespace VL.Stride.Voxels.Rendering.Compositing
                                 x.ShadowMapRenderStages.Add(stage);
                 }
             );
+
             _gBufferRenderStage = new(this, (x, v) => x.GBufferRenderStage = v);
             _postEffects = new(this, (x, v) => x.PostEffects = v);
             _lightShafts = new(this, (x, v) => x.LightShafts = v);
@@ -61,6 +63,7 @@ namespace VL.Stride.Voxels.Rendering.Compositing
                 (x, v) => x.SubsurfaceScatteringBlurEffect = v
             );
             _msaaLevel = new(this, (x, v) => x.MSAALevel = v);
+
             _msaaResolver = new(
                 this,
                 (x, v) =>
@@ -73,14 +76,17 @@ namespace VL.Stride.Voxels.Rendering.Compositing
                     }
                 }
             );
+
             _bindDepthAsResourceDuringTransparentRendering = new(
                 this,
                 (x, v) => x.BindDepthAsResourceDuringTransparentRendering = v
             );
+
             _bindOpaqueAsResourceDuringTransparentRendering = new(
                 this,
                 (x, v) => x.BindOpaqueAsResourceDuringTransparentRendering = v
             );
+
             _voxelRenderer = new(this, (x, v) => x.VoxelRenderer = v);
             _voxelVisualization = new(this, (x, v) => x.VoxelVisualization = v);
             _enabled = new(this, (x, v) => x.Enabled = v, true);
@@ -142,32 +148,5 @@ namespace VL.Stride.Voxels.Rendering.Compositing
             _voxelVisualization.SetValue(voxelVisualization);
 
         public void SetEnabled(bool enabled = true) => _enabled.SetValue(enabled);
-
-        public void Update()
-        {
-            if (IsDirty)
-            {
-                Rebuild(x =>
-                {
-                    _clear.ApplyTo(x);
-                    _opaqueRenderStage.ApplyTo(x);
-                    _transparentRenderStage.ApplyTo(x);
-                    _shadowMapRenderStages.ApplyTo(x);
-                    _gBufferRenderStage.ApplyTo(x);
-                    _postEffects.ApplyTo(x);
-                    _lightShafts.ApplyTo(x);
-                    _vrSettings.ApplyTo(x);
-                    _viewportSettings.ApplyTo(x);
-                    _subsurfaceScatteringBlurEffect.ApplyTo(x);
-                    _msaaLevel.ApplyTo(x);
-                    _msaaResolver.ApplyTo(x);
-                    _bindDepthAsResourceDuringTransparentRendering.ApplyTo(x);
-                    _bindOpaqueAsResourceDuringTransparentRendering.ApplyTo(x);
-                    _voxelRenderer.ApplyTo(x);
-                    _voxelVisualization.ApplyTo(x);
-                    _enabled.ApplyTo(x);
-                });
-            }
-        }
     }
 }

@@ -2720,30 +2720,32 @@
                 <Patch Id="Qd9OdSXk2hgLh2PNHLTsNE" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="VmNNOV3WXT4N4k5ncSeuwT" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="360,918,385,19" Id="DSolGHyS8CsMLuX7w9neQr">
-                  <p:NodeReference LastCategoryFullName="Stride.Rendering" LastDependency="VL.Stride.Engine.vl">
+                  <p:NodeReference LastCategoryFullName="Stride.Voxels" LastDependency="VL.Stride.Voxels.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="ProcessAppFlag" Name="DefaultCompositorSetup" />
+                    <Choice Kind="ProcessAppFlag" Name="VoxelCompositorSetup" />
                   </p:NodeReference>
                   <Pin Id="DB8q2Nih3B1PLPKMoLj2lf" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="JQocLq1Ed2KOsKDU57cXmM" Name="EditMode" Kind="InputPin" />
                   <Pin Id="MAtrZO6my6FMIyhBMFduPQ" Name="Scene Instance" Kind="InputPin" />
                   <Pin Id="SEuSvgkWNkGPv8pQberLTY" Name="Camera" Kind="InputPin" />
                   <Pin Id="F6MmUdljMrZM0uFmynToei" Name="Clear" Kind="InputPin" DefaultValue="False" />
                   <Pin Id="Ir2SDxHSeqqPsDu2dv9Vp9" Name="Clear Color" Kind="InputPin" />
                   <Pin Id="PKg0pipuT08P20mF3fUSel" Name="Post Effects" Kind="InputPin" />
-                  <Pin Id="AkGQcUrb46IPsg8w1xkmqr" Name="Enable Default Post Effects" Kind="InputPin" DefaultValue="True" />
-                  <Pin Id="VhPpcwBuQDzOL9UoOoRqIP" Name="Render Group Mask" Kind="InputPin" />
                   <Pin Id="GbZsfuM8YdIOiFCZnbkWVG" Name="Model Effect Name" Kind="InputPin" />
-                  <Pin Id="RetGfxoXUKkN9kPTlKpVGC" Name="Additional Scene Renderers" Kind="InputPin" />
+                  <Pin Id="VhPpcwBuQDzOL9UoOoRqIP" Name="Render Group Mask" Kind="InputPin" />
+                  <Pin Id="AkGQcUrb46IPsg8w1xkmqr" Name="Enable Default Post Effects" Kind="InputPin" DefaultValue="True" />
                   <Pin Id="GGOAe2JoW9SNbiVa4KRnKi" Name="Enable Camera" Kind="InputPin" DefaultValue="False" />
-                  <Pin Id="JQocLq1Ed2KOsKDU57cXmM" Name="EditMode" Kind="InputPin" />
-                  <Pin Id="Q2Nazt9YNDrLGDF1pIHyNV" Name="MSAALevel" Kind="InputPin" DefaultValue="None" />
-                  <Pin Id="J29S7eeE4baMdHQYfIWv7e" Name="MSAAResolver" Kind="InputPin" />
+                  <Pin Id="RetGfxoXUKkN9kPTlKpVGC" Name="Additional Scene Renderers" Kind="InputPin" />
                   <Pin Id="TT00GziLa5qNyay8D1QcL5" Name="Light Shafts" Kind="InputPin" />
                   <Pin Id="V3H3ulHBOiEMifDpqkD3wz" Name="VR Settings" Kind="InputPin" />
-                  <Pin Id="BlouANxFtaCOASBOmAh939" Name="Viewport Settings" Kind="InputPin" />
                   <Pin Id="UnPzLXWUMxYL9J4p1v02GE" Name="Subsurface Scattering Blur Settings" Kind="InputPin" />
+                  <Pin Id="Q2Nazt9YNDrLGDF1pIHyNV" Name="MSAALevel" Kind="InputPin" DefaultValue="None" />
+                  <Pin Id="J29S7eeE4baMdHQYfIWv7e" Name="MSAAResolver" Kind="InputPin" />
                   <Pin Id="D3Qga0x7Hk3QaFWkl9foFD" Name="Bind Depth As Resource During Transparent Rendering" Kind="InputPin" />
                   <Pin Id="Q5RfBCbkw7oOm5hPG5fKXT" Name="Output" Kind="OutputPin" />
+                  <Pin Id="BlouANxFtaCOASBOmAh939" Name="Viewport Settings" Kind="InputPin" />
+                  <Pin Id="MrWZbpQjcw2M8hYe8IGInL" Name="Bind Opaque As Resource During Transparent Rendering" Kind="InputPin" />
+                  <Pin Id="SuIyQNqo0kHLmZXUFAnIao" Name="Debug Voxels" Kind="InputPin" />
                 </Node>
                 <Node Bounds="814,938,45,19" Id="VlI5M3uMXcLPO7KtXOWyvd">
                   <p:NodeReference LastCategoryFullName="Stride.Rendering" LastDependency="VL.Stride.Rendering.vl">

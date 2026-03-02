@@ -18,30 +18,9 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _filter = new(this, (x, v) => x.Filter = v);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                // Preserve Stride defaults (VoxelFragmentPackFloatR11G11B10, VoxelBufferWriteMax) if unset
-                if (_tempStorageFormat.LastValue is not null)
-                    _tempStorageFormat.ApplyTo(instance);
-                if (_filter.LastValue is not null)
-                    _filter.ApplyTo(instance);
-            });
-        }
-
-        public void SetTempStorageFormat(IVoxelFragmentPacker tempStorageFormat)
-        {
+        public void SetTempStorageFormat(IVoxelFragmentPacker tempStorageFormat) =>
             _tempStorageFormat.SetValue(tempStorageFormat);
-            RebuildIfDirty();
-        }
 
-        public void SetFilter(IVoxelBufferWriter filter)
-        {
-            _filter.SetValue(filter);
-            RebuildIfDirty();
-        }
+        public void SetFilter(IVoxelBufferWriter filter) => _filter.SetValue(filter);
     }
 }

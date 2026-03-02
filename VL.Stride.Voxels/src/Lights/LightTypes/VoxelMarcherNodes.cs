@@ -20,35 +20,12 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _beamDiameter = new(this, (x, v) => x.BeamDiameter = v, 1.0f);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                _steps.ApplyTo(instance);
-                _stepScale.ApplyTo(instance);
-                _beamDiameter.ApplyTo(instance);
-            });
-        }
+        public void SetSteps(int steps = 9) => _steps.SetValue(steps);
 
-        public void SetSteps(int steps = 9)
-        {
-            _steps.SetValue(steps);
-            RebuildIfDirty();
-        }
+        public void SetStepScale(float stepScale = 1.0f) => _stepScale.SetValue(stepScale);
 
-        public void SetStepScale(float stepScale = 1.0f)
-        {
-            _stepScale.SetValue(stepScale);
-            RebuildIfDirty();
-        }
-
-        public void SetBeamDiameter(float beamDiameter = 1.0f)
-        {
+        public void SetBeamDiameter(float beamDiameter = 1.0f) =>
             _beamDiameter.SetValue(beamDiameter);
-            RebuildIfDirty();
-        }
     }
 
     /// <summary>
@@ -74,56 +51,17 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _startOffset = new(this, (x, v) => x.StartOffset = v, 1.0f);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                _editMode.ApplyTo(instance);
-                _fast.ApplyTo(instance);
-                _steps.ApplyTo(instance);
-                _stepScale.ApplyTo(instance);
-                _coneRatio.ApplyTo(instance);
-                _startOffset.ApplyTo(instance);
-            });
-        }
+        public void SetEditMode(bool editMode = true) => _editMode.SetValue(editMode);
 
-        public void SetEditMode(bool editMode = true)
-        {
-            _editMode.SetValue(editMode);
-            RebuildIfDirty();
-        }
+        public void SetFast(bool fast = false) => _fast.SetValue(fast);
 
-        public void SetFast(bool fast = false)
-        {
-            _fast.SetValue(fast);
-            RebuildIfDirty();
-        }
+        public void SetSteps(int steps = 9) => _steps.SetValue(steps);
 
-        public void SetSteps(int steps = 9)
-        {
-            _steps.SetValue(steps);
-            RebuildIfDirty();
-        }
+        public void SetStepScale(float stepScale = 1.0f) => _stepScale.SetValue(stepScale);
 
-        public void SetStepScale(float stepScale = 1.0f)
-        {
-            _stepScale.SetValue(stepScale);
-            RebuildIfDirty();
-        }
+        public void SetConeRatio(float coneRatio = 1.0f) => _coneRatio.SetValue(coneRatio);
 
-        public void SetConeRatio(float coneRatio = 1.0f)
-        {
-            _coneRatio.SetValue(coneRatio);
-            RebuildIfDirty();
-        }
-
-        public void SetStartOffset(float startOffset = 1.0f)
-        {
-            _startOffset.SetValue(startOffset);
-            RebuildIfDirty();
-        }
+        public void SetStartOffset(float startOffset = 1.0f) => _startOffset.SetValue(startOffset);
     }
 
     /// <summary>
@@ -143,34 +81,10 @@ namespace VL.Stride.Voxels.Lights.LightTypes
             _startOffset = new(this, (x, v) => x.StartOffset = v, 0.5f);
         }
 
-        private void RebuildIfDirty()
-        {
-            if (!IsDirty)
-                return;
-            Rebuild(instance =>
-            {
-                _steps.ApplyTo(instance);
-                _coneRatio.ApplyTo(instance);
-                _startOffset.ApplyTo(instance);
-            });
-        }
+        public void SetSteps(int steps = 7) => _steps.SetValue(steps);
 
-        public void SetSteps(int steps = 7)
-        {
-            _steps.SetValue(steps);
-            RebuildIfDirty();
-        }
+        public void SetConeRatio(float coneRatio = 1f) => _coneRatio.SetValue(coneRatio);
 
-        public void SetConeRatio(float coneRatio = 1f)
-        {
-            _coneRatio.SetValue(coneRatio);
-            RebuildIfDirty();
-        }
-
-        public void SetStartOffset(float startOffset = 0.5f)
-        {
-            _startOffset.SetValue(startOffset);
-            RebuildIfDirty();
-        }
+        public void SetStartOffset(float startOffset = 0.5f) => _startOffset.SetValue(startOffset);
     }
 }
