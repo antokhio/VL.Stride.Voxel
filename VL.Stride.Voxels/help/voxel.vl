@@ -1674,7 +1674,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelVolumeComponent" />
             </p:NodeReference>
-            <Pin Id="C7oMlQ4PL00POIh7zuaPut" Name="Enabled" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="SD31NhwZZIZNLckZxFnJ8O" Name="Update" Kind="InputPin" />
             <Pin Id="IFuJpMBrVlFMLxM1KsIknb" Name="Voxelize" Kind="InputPin" />
             <Pin Id="QHONXdTh1TMMz0rU2xbHaZ" Name="Voxelization Method" Kind="InputPin" />
             <Pin Id="OjDXjPaaU9BQHVE37ZvfWT" Name="Storage" Kind="InputPin" />
@@ -1686,6 +1686,7 @@
             <Pin Id="PGzNjqDQPy9N9RYbrBINdj" Name="Visualize Index" Kind="InputPin" />
             <Pin Id="Dt0NbrggkT8QGDKna3H1C7" Name="Visualization" Kind="InputPin" />
             <Pin Id="MEl90HFlwwlPB8SB14BYJl" Name="Output" Kind="OutputPin" />
+            <Pin Id="C7oMlQ4PL00POIh7zuaPut" Name="Enabled" Kind="InputPin" DefaultValue="True" />
           </Node>
           <Node Bounds="1751,2310,105,19" Id="SFC8rjnxkSOLabJ1w1QWTO">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
@@ -1759,6 +1760,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelAttributeEmissionOpacity" />
             </p:NodeReference>
+            <Pin Id="M0QF5QY58QDMOMdp6TnPBJ" Name="Update" Kind="InputPin" />
             <Pin Id="L6hjUMFNuG3NeEie729SJ0" Name="Voxel Layout" Kind="InputPin" />
             <Pin Id="M8fcvwcGca0PNdk4ahGxra" Name="Output" Kind="OutputPin" />
             <Pin Id="F0e6cwHpivuOS1vMDUau2K" Name="Modifiers" Kind="InputPin" />
@@ -1769,6 +1771,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelizationMethodDominantAxis" />
             </p:NodeReference>
+            <Pin Id="HTPglMqOiDbOCyyrnrGBfx" Name="Update" Kind="InputPin" />
             <Pin Id="Jdq7YZCOv7vOY8CPcQPJgx" Name="Multisample Count" Kind="InputPin" />
             <Pin Id="KB5YOUGCmikNljCuUr8cr1" Name="Output" Kind="OutputPin" />
           </Node>
@@ -1790,6 +1793,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelStorageClipmaps" />
             </p:NodeReference>
+            <Pin Id="T8yNVw4qRxuPp27diCcmqt" Name="Update" Kind="InputPin" />
             <Pin Id="VKyExg0MDAaQFi4uNHeDHv" Name="Clip Resolution" Kind="InputPin" DefaultValue="x128" />
             <Pin Id="QBY4FwcN541QYgG6cFpdJO" Name="Updates Per Frame" Kind="InputPin" DefaultValue="SingleClipmap" />
             <Pin Id="Pf8a4UVdEWCMGTziPoGrIT" Name="Downsample Finer Clip Maps" Kind="InputPin" DefaultValue="False" />
@@ -1872,6 +1876,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelLayoutIsotropic" />
             </p:NodeReference>
+            <Pin Id="ObtBvCFmVsqLUBlolW3QJ3" Name="Update" Kind="InputPin" />
             <Pin Id="HwIYpdrh1RLQIQWMa9orfk" Name="Max Brightness" Kind="InputPin" />
             <Pin Id="TgwjREuY5hBPR5p6HyBXUH" Name="Storage Method" Kind="InputPin" />
             <Pin Id="Vke9QKeKrgTMq69iHvfI5V" Name="Output" Kind="OutputPin" />
@@ -1882,6 +1887,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelStorageMethodIndirect" />
             </p:NodeReference>
+            <Pin Id="EBgs3cb1mBnPekzQxg7HgT" Name="Update" Kind="InputPin" />
             <Pin Id="RyRvKJP1OkpOSYLjAzLBRc" Name="Temp Storage Format" Kind="InputPin" />
             <Pin Id="NSgHofaqiDbPMSitoqr33D" Name="Output" Kind="OutputPin" />
             <Pin Id="J4qflZ1qSefLqzOvZy2OiL" Name="Filter" Kind="InputPin" />
@@ -1899,12 +1905,14 @@
               <Choice Kind="ProcessNode" Name="VoxelBufferWriteMax" />
             </p:NodeReference>
             <Pin Id="SCke5OwQ5eYNG4F8xjylYt" Name="Output" Kind="OutputPin" />
+            <Pin Id="QY9qQTVSkNxNatQ39yZK01" Name="Update" Kind="InputPin" />
           </Node>
           <Node Bounds="2402,1954,149,19" Id="A1qxsrMQ99vO43KROPeOpO">
             <p:NodeReference LastCategoryFullName="Stride.Voxels.Lights.LightTypes" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelMarchSetHemisphere12" />
             </p:NodeReference>
+            <Pin Id="NlKv4VXx00VMl18Vp9nGSc" Name="Update" Kind="InputPin" />
             <Pin Id="P1fWTWmFQLfNjFJ8rUsTmV" Name="Marcher" Kind="InputPin" />
             <Pin Id="KPn5t2NtkuyMev7qQoKjGr" Name="Offset" Kind="InputPin" />
             <Pin Id="RhX0Wwy54jQPMDtCruH2ET" Name="Output" Kind="OutputPin" />
@@ -1914,6 +1922,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelMarchConePerMipmap" />
             </p:NodeReference>
+            <Pin Id="BPoGmPu8PWZO0F9Nz0BvwU" Name="Update" Kind="InputPin" />
             <Pin Id="G6DBiqjZe4ePPw3KQw7P7t" Name="Steps" Kind="InputPin" />
             <Pin Id="Cir5LIIHiqFLbDEXlPK5c4" Name="Cone Ratio" Kind="InputPin" />
             <Pin Id="Sfsd1jT9XNhNBPmjlAlKrt" Name="Start Offset" Kind="InputPin" />
@@ -1924,11 +1933,12 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="2447,2149,105,19" Id="JnWsXjnha6JO07c1P1Ti8z">
+          <Node Bounds="2447,2149,125,19" Id="JnWsXjnha6JO07c1P1Ti8z">
             <p:NodeReference LastCategoryFullName="Stride.Lights.LightTypes.VoxelMarcher" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelMarchCone" />
             </p:NodeReference>
+            <Pin Id="LoAYFEdXw8qM67s6ayrll6" Name="Update" Kind="InputPin" />
             <Pin Id="V2m9xYlvrIYPw13Xd4RCMm" Name="Edit Mode" Kind="InputPin" />
             <Pin Id="B0ZhAb06uIMPSgSq2ZZWRj" Name="Fast" Kind="InputPin" />
             <Pin Id="G07R68x5UI9P6uBxZltAn2" Name="Steps" Kind="InputPin" />
@@ -1997,6 +2007,7 @@
               <Choice Kind="ProcessNode" Name="VoxelAttributeSolidity" />
             </p:NodeReference>
             <Pin Id="MONIOgNEv3FPdrBJqHpzsh" Name="Output" Kind="OutputPin" />
+            <Pin Id="Tj7lRphBFOkLpfon9vS1ZL" Name="Update" Kind="InputPin" />
           </Node>
           <Pad Id="TiwmiXjHCn8NGNfg0dfiEg" Comment="Has Changed" Bounds="2349,1667,35,35" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="2658,1454,174,19" Id="D17YmEp5sgUNacutRlU9pT">
@@ -2005,6 +2016,7 @@
               <Choice Kind="ProcessNode" Name="VoxelAttributeDirectionalCoverage" />
             </p:NodeReference>
             <Pin Id="N9NKyfNqi8SLoIonFFG38Y" Name="Output" Kind="OutputPin" />
+            <Pin Id="LcABnCAiuTJMF5jaMMrZ0Z" Name="Update" Kind="InputPin" />
           </Node>
           <Pad Id="CmjoAQZnNbzPrvmjGcKcvX" Comment="Force" Bounds="2213,1488,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -2019,6 +2031,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelLayoutAnisotropicPaired" />
             </p:NodeReference>
+            <Pin Id="M9iUR3mYagdOIufxDuNpBd" Name="Update" Kind="InputPin" />
             <Pin Id="PWDx01S686cLHYFWZN2ZWN" Name="Max Brightness" Kind="InputPin" />
             <Pin Id="Ht522SOUTe6PXSRksz5ref" Name="Storage Method" Kind="InputPin" />
             <Pin Id="QyZQpHcK5XHPUvx0aWY3zb" Name="Output" Kind="OutputPin" />
@@ -2029,6 +2042,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelLayoutAnisotropic" />
             </p:NodeReference>
+            <Pin Id="ETkgIcnLOnNLnyBxikJH9Y" Name="Update" Kind="InputPin" />
             <Pin Id="INSKmMJ2XpkM0ea38Khy5w" Name="Max Brightness" Kind="InputPin" />
             <Pin Id="Pb9X1LDtO9lP8na1sqkW9i" Name="Storage Method" Kind="InputPin" />
             <Pin Id="HcdNCTJi3BTMQRUMivejjv" Name="Output" Kind="OutputPin" />
@@ -2039,6 +2053,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelizationMethodSingleAxis" />
             </p:NodeReference>
+            <Pin Id="HAIZ9UZR6hZNcZRp6Z58mV" Name="Update" Kind="InputPin" />
             <Pin Id="QCxhiXnwEdhQLDzAhViBEN" Name="Voxelization Axis" Kind="InputPin" />
             <Pin Id="DuLHus8uZAUQM2Ibmx1PAa" Name="Output" Kind="OutputPin" />
           </Node>
@@ -2047,6 +2062,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelizationMethodTriAxis" />
             </p:NodeReference>
+            <Pin Id="Tm76oS95oQEOhApwONzwdA" Name="Update" Kind="InputPin" />
             <Pin Id="CyqMeJPCfCVOQYAnWmbW5j" Name="Multisample Count" Kind="InputPin" />
             <Pin Id="HSozddF5101Oon0jqWdPoJ" Name="Output" Kind="OutputPin" />
           </Node>
@@ -2096,6 +2112,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="VoxelMarchBeam" />
             </p:NodeReference>
+            <Pin Id="AW25eMLvb6XOew4GlHRB9C" Name="Update" Kind="InputPin" />
             <Pin Id="Sm1JFrCjlunNxq2So7f4Bb" Name="Steps" Kind="InputPin" />
             <Pin Id="LcXp1RahItNMmxdHcjnUev" Name="Step Scale" Kind="InputPin" />
             <Pin Id="Pd8VXI3xinfLGsAyyuW8sJ" Name="Beam Diameter" Kind="InputPin" />
@@ -2107,6 +2124,7 @@
               <Choice Kind="ProcessNode" Name="VoxelModifierEmissionOpacityAntiAliasing" />
             </p:NodeReference>
             <Pin Id="RRlhDDZidaiLxwcLFuenFe" Name="Output" Kind="OutputPin" />
+            <Pin Id="N2rvZl7eYUvPe0XKB69ZAs" Name="Update" Kind="InputPin" />
             <Pin Id="GFz6NerVLnoPYdSaqYZtP3" Name="Enabled" Kind="InputPin" />
           </Node>
           <Node Bounds="2336,1132,188,19" Id="NF2aTjrwyYmPKLEuARf7zV">
@@ -2115,6 +2133,7 @@
               <Choice Kind="ProcessNode" Name="VoxelModifierEmissionOpacityOpacify" />
             </p:NodeReference>
             <Pin Id="Jv8iRwqWkCNOpwnh5NMnw6" Name="Output" Kind="OutputPin" />
+            <Pin Id="Dqiy2ijZ94eLWll2iaQplL" Name="Update" Kind="InputPin" />
             <Pin Id="DV59Wk92qxmMaNni4an5c1" Name="Enabled" Kind="InputPin" />
           </Node>
           <Node Bounds="2546,1130,187,19" Id="Kv9jmZ4sBmUNf0P555lch7">
@@ -2123,6 +2142,7 @@
               <Choice Kind="ProcessNode" Name="VoxelModifierEmissionOpacitySolidify" />
             </p:NodeReference>
             <Pin Id="SKFpZ4KY90hOvOOeg1YGbv" Name="Output" Kind="OutputPin" />
+            <Pin Id="LJDGESsDNbbNTGlMuJtKCe" Name="Update" Kind="InputPin" />
             <Pin Id="NRklEOgWibiONxnVACJuq4" Name="Enabled" Kind="InputPin" />
           </Node>
           <Node Bounds="2421,1188,45,19" Id="VzIvWAr1n0QOferQTv2BuT">
@@ -2323,6 +2343,51 @@
             <Pin Id="RrGR99XDJPJLvlcvpUfZiS" Name="Camera Component" Kind="OutputPin" />
             <Pin Id="KDLLJMEbZ2tLDI5R1kPWQi" Name="Interest" Kind="OutputPin" />
           </Node>
+          <Node Bounds="1379,3380,205,19" Id="Mgsgjt3q52QNIUYJxVjc7c">
+            <p:NodeReference LastCategoryFullName="Stride.Voxels" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SceneWindow (Voxels)" />
+            </p:NodeReference>
+            <Pin Id="QvEd6SkeCRTNfogo1hxddV" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="SGcjICwUgE2Ls0vkDuGvV0" Name="Bounds" Kind="InputPin" DefaultValue="-1590, 62, 786, 432" IsHidden="true" />
+            <Pin Id="Eusbvap20KvQEKHa5LfbZV" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
+            <Pin Id="QF5SXf7fqQuLzYHIuuEewM" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CnL5FZZALgzNa0vu63pr5v" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
+            <Pin Id="MftkSImIZiCL1AvkEBQ8iQ" Name="Back Buffer Format" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RFdopuWOh7ELZ4ikQo4Wmi" Name="Depth Buffer Format" Kind="InputPin" IsHidden="true" />
+            <Pin Id="E819LzmNhMFNqj3UBnpZ7v" Name="Input Priority" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RLcNGZJJVwpPBOXdJyKMOf" Name="Input" Kind="InputPin" />
+            <Pin Id="Fd8WKNzSrpzMMVuJaGyQ1E" Name="Camera" Kind="InputPin" />
+            <Pin Id="PMJIRJiKNI6OKBT5lJ4Bdy" Name="Enable Default Camera" Kind="InputPin" />
+            <Pin Id="OemelsjUE9bO37aFZ41fDO" Name="Title" Kind="InputPin" />
+            <Pin Id="Nx3NdzxYRmhNId1DKMeM9f" Name="Clear" Kind="InputPin" />
+            <Pin Id="Qz4TqrNYXNTMJatUDG4mpD" Name="Clear Color" Kind="InputPin" />
+            <Pin Id="Qx6Xai5789YOLVptTsb88K" Name="Post Effects" Kind="InputPin" />
+            <Pin Id="DqMqo2hqKRHOIk9DMGZRas" Name="Enable Default Post Effects" Kind="InputPin" />
+            <Pin Id="Ntat4lsWes5QCcws62oUo1" Name="Render Group Mask" Kind="InputPin" IsHidden="true" />
+            <Pin Id="S7eNqxzv1xDOghdiTTwh9h" Name="Commands" Kind="InputPin" IsHidden="true" />
+            <Pin Id="U04SFd2TleJL26tTa86ppy" Name="Model Effect Name" Kind="InputPin" IsHidden="true" />
+            <Pin Id="TN97L8iEhtYOCZPKTEoR1c" Name="Additional Scene Renderers" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Vyq5F3sM4RJMSIcVk1W1la" Name="Input Source" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RlUJzOMRjQnLhjf5d395X8" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
+            <Pin Id="UYm2WGZqGJHMAVARuqfN9c" Name="Enabled" Kind="InputPin" />
+            <Pin Id="DYIGd0aUr9ULWTlW6G1tQN" Name="Present Interval" Kind="InputPin" />
+            <Pin Id="LSyTWXt0ii4Nmb84OP4QXO" Name="Output" Kind="OutputPin" />
+            <Pin Id="JTLYLV2GBIFLjbDCdpCJdK" Name="Back Buffer" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="LGhhOwgG1PHOLOzzna08OV" Name="Depth Buffer" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="LI33r9GG0fjN84VDE2jvp4" Name="Input Source" Kind="OutputPin" />
+            <Pin Id="Fjuf94VSjJLMHsvnzutCp2" Name="Client Bounds" Kind="OutputPin" />
+            <Pin Id="Ck3cetxMmhcO7XOPFFCUs8" Name="Light Shafts" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UTWsES1PphPQCSdgd1yImu" Name="VR Settings" Kind="InputPin" IsHidden="true" />
+            <Pin Id="IlxuQmxFPkrOqkuP9axD9K" Name="Subsurface Scattering Blur Settings" Kind="InputPin" IsHidden="true" />
+            <Pin Id="NgGLGgID2lONmVWAiqouAV" Name="MSAALevel" Kind="InputPin" IsHidden="true" />
+            <Pin Id="BzLBrJPor42LMoW0QWkBu3" Name="MSAAResolver" Kind="InputPin" IsHidden="true" />
+            <Pin Id="GlIasSO3h9RLB85hdNiC4z" Name="Bind Depth As Resource During Transparent Rendering" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Rwemy5ypyZzMLeroOI1UGH" Name="Viewport Settings" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UHDNXU2FDiJPskQb9CrsXp" Name="Present Call Intercept" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HfzPFi3r4DZMWxgyvPRkOj" Name="Bind Opaque As Resource During Transparent Rendering" Kind="InputPin" IsHidden="true" />
+            <Pin Id="B6NmQKL2LWCLlZzPi7GGJR" Name="Debug Voxels" Kind="InputPin" IsHidden="true" />
+          </Node>
         </Canvas>
         <Patch Id="VpbWvDZ0cjTM4HNqorhL6K" Name="Create" />
         <Patch Id="P3dv8qcW2dSQVF2Yyr6jaw" Name="Update" ParticipatingElements="GPJvYl3HjGoLfldTBaQSMH" />
@@ -2404,6 +2469,8 @@
         <Link Id="JU0f9yKz8cDNAXZ7SB9E42" Ids="NVaQIlgxg9oOhT3anchfHw,A6YGiOqyAnFQHKQDRkeIq7" />
         <Link Id="FCYIQsbHIZoMPOvJPdCXeZ" Ids="PGT7d3Ono6NPtfQjIbRXnN,HffHurSeFSJNCBsCFpbdlm" />
         <Link Id="HJpvnoDuZL0LQjoZpnQYve" Ids="Af5xpeVpV5jNP4mf1SBpKm,PGzNjqDQPy9N9RYbrBINdj" />
+        <Link Id="DJKaFEUfFdrLQSpNLZLvbZ" Ids="VNU2uqQzCGpMANFOHCdvsH,RLcNGZJJVwpPBOXdJyKMOf" />
+        <Link Id="S4rc4MHYhCUOUhJQQDIzRh" Ids="UiNCfdzkveZLYOC8hgBQnm,Fd8WKNzSrpzMMVuJaGyQ1E" />
       </Patch>
     </Node>
   </Patch>

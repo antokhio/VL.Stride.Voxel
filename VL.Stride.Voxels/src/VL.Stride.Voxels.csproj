@@ -29,7 +29,7 @@
     </ItemGroup>
     <Copy
       SourceFiles="@(_StrideVoxelsLocalAssetFiles)"
-      DestinationFiles="@(_StrideVoxelsLocalAssetFiles->'$(TargetDir)shaders\%(RecursiveDir)%(Filename)%(Extension)')"
+      DestinationFiles="@(_StrideVoxelsLocalAssetFiles->'$(MSBuildProjectDirectory)\..\shaders\%(RecursiveDir)%(Filename)%(Extension)')"
       SkipUnchangedFiles="true"
     />
   </Target>

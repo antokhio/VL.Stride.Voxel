@@ -44,7 +44,7 @@ namespace VL.Stride.Voxels.Rendering.Compositing
             // Voxel collection must happen before the base collect
             VoxelRenderer?.Collect(Context, shadowMapRenderer);
 
-            //base.CollectCore(context);
+            base.CollectCore(context);
         }
 
         protected override void DrawCore(RenderContext context, RenderDrawContext drawContext)
@@ -58,7 +58,7 @@ namespace VL.Stride.Voxels.Rendering.Compositing
                 }
             }
 
-            //base.DrawCore(context, drawContext);
+            base.DrawCore(context, drawContext);
         }
 
         protected override void DrawView(
