@@ -3600,6 +3600,88 @@
             </Node>
           </Canvas>
         </Canvas>
+        <Canvas Id="KDjIJoTbSJ0OqgeWMyrZwY" Name="Attributes" Position="1184,330">
+          <!--
+
+    ************************ VoxelAttribute ************************
+
+-->
+          <Node Name="VoxelAttribute" Bounds="399,320" Id="MkDLBR2craoM3Wdb441K7m">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+              <Choice Kind="TypeFlag" Name="VoxelAttribute" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+              <AssemblyReference ID="Stride.Voxels.dll" />
+            </p:TypeAnnotation>
+            <Patch Id="Fo0oE2pKN4LOl7Pt42pj4f">
+              <Canvas Id="DpxnDmcrQlqP03PO4W2v1e" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="K7JYOYRvcsaLtzjusQX4Kf" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VoxelAttributeDirectionalCoverage ************************
+
+-->
+          <Node Name="VoxelAttributeDirectionalCoverage" Bounds="679,320" Id="MhVD6LN8rpeL1b4IJmAC2e">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+              <Choice Kind="TypeFlag" Name="VoxelAttributeDirectionalCoverage" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+              <AssemblyReference ID="Stride.Voxels.dll" />
+            </p:TypeAnnotation>
+            <Patch Id="DfDYkw37ZRpMV1WaHbWL85">
+              <Canvas Id="DHRALLAC4ZFPllfCzPpn5L" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="MBHPoxENxJiOstsUk1NjBJ" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VoxelAttributeEmissionOpacity ************************
+
+-->
+          <Node Name="VoxelAttributeEmissionOpacity" Bounds="399,370" Id="KfIXB1PhdLnQSxrFBl52OE">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+              <Choice Kind="TypeFlag" Name="VoxelAttributeEmissionOpacity" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+              <AssemblyReference ID="Stride.Voxels.dll" />
+            </p:TypeAnnotation>
+            <Patch Id="GsIJCx8QyqtMNvZ5nvpJJH">
+              <Canvas Id="PilPYXLsuXMP13WYfBi7Rg" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="ENTU1SDvn9wPHcD5Op5jGx" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VoxelAttributeSolidity ************************
+
+-->
+          <Node Name="VoxelAttributeSolidity" Bounds="679,370" Id="JoSRS5MxRDyPJHXHmNV5m6">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+              <Choice Kind="TypeFlag" Name="VoxelAttributeSolidity" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+              <AssemblyReference ID="Stride.Voxels.dll" />
+            </p:TypeAnnotation>
+            <Patch Id="UX2Kn38epcwONaxf8ukmZG">
+              <Canvas Id="QWWzMSTJUcHOQRxI5Uysft" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="Kv6xI1ZZZVtNKKKuZhMPJT" IsHidden="true" />
+            </Patch>
+          </Node>
+        </Canvas>
       </Canvas>
     </Canvas>
     <!--
