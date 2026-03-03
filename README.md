@@ -1,6 +1,6 @@
-![VL.Stride.Voxels Icon](icon.png)
-
 # VL.Stride.Voxels
+
+<img src="icon.png" width="100%" height="240" alt="VL.Stride.Voxels Banner">
 
 A voxel rendering and compositing integration for [vvvv](https://vvvv.org) and [Stride](https://github.com/stride3d/stride).
 
