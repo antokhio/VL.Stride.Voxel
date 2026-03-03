@@ -6,7 +6,8 @@ namespace VL.Stride.Rendering.Voxels.Voxelization.Attributes
 {
     [ProcessNode]
     public abstract class VoxelAttributeNode<TInstance> : ProcessNodeBase<TInstance>
-        where TInstance : VoxelAttribute, new() { }
+        where TInstance : VoxelAttribute, new()
+    { }
 
     /// <summary>
     /// Voxel attribute for emission and opacity data.
@@ -15,6 +16,8 @@ namespace VL.Stride.Rendering.Voxels.Voxelization.Attributes
     public class VoxelAttributeEmissionOpacityNode
         : VoxelAttributeNode<VoxelAttributeEmissionOpacity>
     {
+        protected override bool IsImmutable => false;
+
         private readonly Cachable<IVoxelLayout> _voxelLayout;
         private readonly CachableList<VoxelModifierEmissionOpacity> _modifiers;
         private readonly Cachable<LightFalloffs> _lightFalloff;
@@ -46,7 +49,8 @@ namespace VL.Stride.Rendering.Voxels.Voxelization.Attributes
     /// </summary>
     [ProcessNode(Name = "VoxelAttributeDirectionalCoverage")]
     public class VoxelAttributeDirectionalCoverageNode
-        : VoxelAttributeNode<VoxelAttributeDirectionalCoverage> { }
+        : VoxelAttributeNode<VoxelAttributeDirectionalCoverage>
+    { }
 
     /// <summary>
     /// Voxel attribute for solidity.

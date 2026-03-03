@@ -5,14 +5,18 @@ namespace VL.Stride.Rendering.Voxels.Voxelization.Modifiers.EmissionOpacityFilte
 {
     [ProcessNode]
     public abstract class VoxelModifierEmissionOpacityNode<TInstance> : VoxelModifierNode<TInstance>
-        where TInstance : VoxelModifierEmissionOpacity, new() { }
+        where TInstance : VoxelModifierEmissionOpacity, new()
+    {
+        protected override bool IsImmutable => false;
+    }
 
     /// <summary>
     /// Anti-aliasing modifier for voxel emission and opacity.
     /// </summary>
     [ProcessNode(Name = "VoxelModifierEmissionOpacityAntiAliasing")]
     public class VoxelModifierEmissionOpacityAntiAliasingNode
-        : VoxelModifierEmissionOpacityNode<VoxelModifierEmissionOpacityAntiAliasing> { }
+        : VoxelModifierEmissionOpacityNode<VoxelModifierEmissionOpacityAntiAliasing>
+    { }
 
     /// <summary>
     /// Opacify modifier for voxel emission and opacity.
@@ -36,5 +40,6 @@ namespace VL.Stride.Rendering.Voxels.Voxelization.Modifiers.EmissionOpacityFilte
     /// </summary>
     [ProcessNode(Name = "VoxelModifierEmissionOpacitySolidify")]
     public class VoxelModifierEmissionOpacitySolidifyNode
-        : VoxelModifierEmissionOpacityNode<VoxelModifierEmissionOpacitySolidify> { }
+        : VoxelModifierEmissionOpacityNode<VoxelModifierEmissionOpacitySolidify>
+    { }
 }
