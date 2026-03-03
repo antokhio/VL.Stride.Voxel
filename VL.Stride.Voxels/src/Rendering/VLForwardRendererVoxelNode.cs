@@ -19,6 +19,7 @@ namespace VL.Stride.Rendering.Voxels.Rendering
         protected override bool IsImmutable => false;
 
         private readonly Cachable<ClearRenderer> _clear;
+        private readonly Cachable<bool> _lightProbes;
         private readonly Cachable<RenderStage> _opaqueRenderStage;
         private readonly Cachable<RenderStage> _transparentRenderStage;
         private readonly Cachable<IReadOnlyList<RenderStage>> _shadowMapRenderStages;
@@ -39,6 +40,7 @@ namespace VL.Stride.Rendering.Voxels.Rendering
         public VLForwardRendererVoxelNode()
         {
             _clear = new(this, (x, v) => x.Clear = v);
+            _lightProbes = new(this, (x, v) => x.LightProbes = v, false);
             _opaqueRenderStage = new(this, (x, v) => x.OpaqueRenderStage = v);
             _transparentRenderStage = new(this, (x, v) => x.TransparentRenderStage = v);
 
@@ -58,12 +60,12 @@ namespace VL.Stride.Rendering.Voxels.Rendering
             _postEffects = new(this, (x, v) => x.PostEffects = v);
             _lightShafts = new(this, (x, v) => x.LightShafts = v);
             _vrSettings = new(this, (x, v) => x.VRSettings = v);
-            _viewportSettings = new(this, (x, v) => x.ViewportSettings = v);
+            _viewportSettings = new(this, (x, v) => x.ViewportSettings = v, new ViewportSettings());
             _subsurfaceScatteringBlurEffect = new(
                 this,
                 (x, v) => x.SubsurfaceScatteringBlurEffect = v
             );
-            _msaaLevel = new(this, (x, v) => x.MSAALevel = v);
+            _msaaLevel = new(this, (x, v) => x.MSAALevel = v, MultisampleCount.None);
 
             _msaaResolver = new(
                 this,
@@ -80,12 +82,14 @@ namespace VL.Stride.Rendering.Voxels.Rendering
 
             _bindDepthAsResourceDuringTransparentRendering = new(
                 this,
-                (x, v) => x.BindDepthAsResourceDuringTransparentRendering = v
+                (x, v) => x.BindDepthAsResourceDuringTransparentRendering = v,
+                true
             );
 
             _bindOpaqueAsResourceDuringTransparentRendering = new(
                 this,
-                (x, v) => x.BindOpaqueAsResourceDuringTransparentRendering = v
+                (x, v) => x.BindOpaqueAsResourceDuringTransparentRendering = v,
+                false
             );
 
             _voxelRenderer = new(this, (x, v) => x.VoxelRenderer = v);
@@ -94,6 +98,8 @@ namespace VL.Stride.Rendering.Voxels.Rendering
         }
 
         public void SetClear(ClearRenderer clear) => _clear.SetValue(clear);
+
+        public void SetLightProbes(bool lightProbes = false) => _lightProbes.SetValue(lightProbes);
 
         public void SetOpaqueRenderStage(RenderStage opaqueRenderStage) =>
             _opaqueRenderStage.SetValue(opaqueRenderStage);
@@ -129,7 +135,7 @@ namespace VL.Stride.Rendering.Voxels.Rendering
             _msaaResolver.SetValue(msaaResolver);
 
         public void SetBindDepthAsResourceDuringTransparentRendering(
-            bool bindDepthAsResourceDuringTransparentRendering = false
+            bool bindDepthAsResourceDuringTransparentRendering = true
         ) =>
             _bindDepthAsResourceDuringTransparentRendering.SetValue(
                 bindDepthAsResourceDuringTransparentRendering
