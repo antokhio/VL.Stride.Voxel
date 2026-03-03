@@ -1,8 +1,6 @@
 # VL.Stride.Voxels
 
-<p align="center">
-  <img src="icon.png" height="300" alt="VL.Stride.Voxels Icon">
-</p>
+<img src="hero.png" width="100%" alt="VL.Stride.Voxels Banner">
 
 A voxel rendering and compositing integration for [vvvv](https://vvvv.org) and [Stride](https://github.com/stride3d/stride).
 
