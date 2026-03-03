@@ -3,25 +3,12 @@ using VL.Core.Import;
 
 namespace VL.Stride.Voxels
 {
-    /// <summary>
-    /// Base class for vvvv nodes wrapping an external Stride datatype.
-    /// Subclass <see cref="VoxelNodeMutable{TInstance}"/> for in-place mutation
-    /// or <see cref="VoxelNodeImmutable{TInstance}"/> for copy-on-write semantics.
-    /// </summary>
     [ProcessNode]
     public abstract class VoxelNodeBase<TInstance>
         where TInstance : new()
     {
-        /// <summary>
-        /// The wrapped instance.
-        /// </summary>
         public TInstance Output { get; protected set; } = new TInstance();
 
-        #region Cachable<T>
-
-        /// <summary>
-        /// Tracks a single property. Only applies to the instance when the value actually changes.
-        /// </summary>
         protected class Cachable<T>
         {
             private static bool ReferenceEquals(T a, T b) => object.ReferenceEquals(a, b);
@@ -73,14 +60,6 @@ namespace VL.Stride.Voxels
             }
         }
 
-        #endregion
-
-        #region CachableList<T>
-
-        /// <summary>
-        /// Tracks a list property. Synchronizes contents only when the sequence differs.
-        /// When a setter is provided, assigns a new list; otherwise mutates in place.
-        /// </summary>
         protected class CachableList<T>
         {
             private readonly TInstance _instance;
@@ -146,15 +125,8 @@ namespace VL.Stride.Voxels
                 return a.SequenceEqual(b);
             }
         }
-
-        #endregion
     }
 
-    /// <summary>
-    /// Mutable wrapper — a single TInstance lives for the node's lifetime.
-    /// Properties are mutated in-place via Cachable setters. Downstream sees
-    /// the same reference; changes are detected by the properties themselves.
-    /// </summary>
     [ProcessNode]
     public abstract class VoxelNodeMutable<TInstance> : VoxelNodeBase<TInstance>, IDisposable
         where TInstance : new()
@@ -166,10 +138,6 @@ namespace VL.Stride.Voxels
         }
     }
 
-    /// <summary>
-    /// Immutable wrapper — emits a new TInstance reference whenever any
-    /// tracked property changes, so downstream ReferenceEquals detects it.
-    /// </summary>
     [ProcessNode]
     public abstract class VoxelNodeImmutable<TInstance> : VoxelNodeBase<TInstance>
         where TInstance : new()
@@ -177,19 +145,10 @@ namespace VL.Stride.Voxels
         private bool _isDirty = true;
         private readonly List<Action<TInstance>> _applicators = new();
 
-        /// <summary>
-        /// Whether any input changed since last rebuild.
-        /// </summary>
         protected bool IsDirty => _isDirty;
 
-        /// <summary>
-        /// Signal that a rebuild is needed.
-        /// </summary>
         protected void MarkDirty() => _isDirty = true;
 
-        /// <summary>
-        /// Tracks a property and auto-marks the node dirty on change.
-        /// </summary>
         protected new class Cachable<T>
         {
             private static bool ReferenceEquals(T a, T b) => object.ReferenceEquals(a, b);
@@ -198,6 +157,7 @@ namespace VL.Stride.Voxels
             private readonly Action<TInstance, T> _setter;
             private readonly Func<T, T, bool> _equals;
             private T _lastValue;
+            private bool _hasExplicitValue;
 
             public Cachable(
                 VoxelNodeImmutable<TInstance> node,
@@ -215,12 +175,18 @@ namespace VL.Stride.Voxels
                             ? ReferenceEquals
                             : EqualityComparer<T>.Default.Equals
                     );
+
                 _lastValue = initialValue;
 
-                // AUTO-REGISTER: Tell the parent node how to apply this value during Update()
+                // Prevent stomping constructor defaults with implicit null on ref types.
+                _hasExplicitValue = typeof(T).IsValueType || initialValue is not null;
+
+                if (_hasExplicitValue)
+                    _setter(_node.Output, _lastValue);
+
                 _node._applicators.Add(instance =>
                 {
-                    if (_lastValue is not null)
+                    if (_hasExplicitValue)
                         _setter(instance, _lastValue);
                 });
             }
@@ -232,15 +198,12 @@ namespace VL.Stride.Voxels
                 if (!_equals(_lastValue, value))
                 {
                     _lastValue = value;
+                    _hasExplicitValue = true; // explicit assignment (including null)
                     _node.MarkDirty();
                 }
             }
         }
 
-        /// <summary>
-        /// Called automatically by vvvv/vl. Creates a fresh TInstance and applies
-        /// all registered cached values if the node is marked as dirty.
-        /// </summary>
         public void Update()
         {
             if (!_isDirty)
@@ -248,23 +211,15 @@ namespace VL.Stride.Voxels
 
             var instance = new TInstance();
 
-            // Automatically apply all properties that were registered by Cachable
             foreach (var apply in _applicators)
-            {
                 apply(instance);
-            }
 
-            // Optional hook for nodes that have complex logic beyond standard property setting
             OnBuildInstance(instance);
 
             Output = instance;
             _isDirty = false;
         }
 
-        /// <summary>
-        /// Override this ONLY if you have custom initialization logic that cannot be handled
-        /// by standard Cachable properties. Empty by default.
-        /// </summary>
         protected virtual void OnBuildInstance(TInstance instance) { }
     }
 }

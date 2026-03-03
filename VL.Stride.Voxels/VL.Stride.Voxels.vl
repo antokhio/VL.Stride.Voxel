@@ -20,6 +20,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="VLForwardRendererVoxel" />
               </p:NodeReference>
+              <Pin Id="UxM7VAqUhpYP8Aqd5cvEQ5" Name="Update" Kind="InputPin" />
               <Pin Id="IWW4J9YrTqPP0U5m5Lq9Tq" Name="Clear" Kind="InputPin" />
               <Pin Id="SMEIRUy6e42QUiyYFReha9" Name="Opaque Render Stage" Kind="InputPin" />
               <Pin Id="CTEwnUfHFh3MulOG9Bob2F" Name="Transparent Render Stage" Kind="InputPin" />
@@ -38,7 +39,6 @@
               <Pin Id="FlKe6xJHnQUO96dmDGr7HE" Name="Voxel Visualization" Kind="InputPin" />
               <Pin Id="CtBRwDwXt2VOICxciTKfub" Name="Enabled" Kind="InputPin" />
               <Pin Id="M4hGoV35rjXMKtodxAtk5L" Name="Output" Kind="OutputPin" />
-              <Pin Id="UxM7VAqUhpYP8Aqd5cvEQ5" Name="Update" Kind="InputPin" />
             </Node>
             <ControlPoint Id="GsEApK9wRXeM31lJ1E6Y2P" Bounds="1446,1404" />
             <ControlPoint Id="CqLa6q33f9OMcNHZQ5Cmpg" Bounds="904,1109" />
@@ -210,7 +210,7 @@
               <Pin Id="VXep5lhhAEkNsrCsm8RCEM" Name="Not Assigned" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="NbIBVrt3lJRPSIuo0XXqqw" Bounds="1172,747" />
-            <Node Bounds="1980,391,108,107" Id="TaJJ9W7S4JhPUndxWgoM4D">
+            <Node Bounds="1980,391,206,107" Id="TaJJ9W7S4JhPUndxWgoM4D">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
@@ -234,10 +234,15 @@
                     <Choice Kind="OperationCallFlag" Name="SetMSAA" />
                   </p:NodeReference>
                   <Pin Id="BKlFZn4YtQYNDzO6gKO66D" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="VnYk3R6q0vmNPv2QbXmcte" Name="MSAALevel" Kind="InputPin" />
+                  <Pin Id="VnYk3R6q0vmNPv2QbXmcte" Name="MSAALevel" Kind="InputPin" DefaultValue="None" />
                   <Pin Id="OjPHeeB4zQENdKkqM2Woby" Name="MSAAResolver" Kind="InputPin" />
                   <Pin Id="V8kRCVpnXuJMeWJyYwGPSW" Name="Output" Kind="OutputPin" />
                 </Node>
+                <Pad Id="QJgrV5DYD2fO659mxbIDtI" Comment="MSAALevel" Bounds="2049,430,54,15" ShowValueBox="true" isIOBox="true" Value="None">
+                  <p:TypeAnnotation LastCategoryFullName="Stride.Graphics" LastDependency="VL.Stride.vl">
+                    <Choice Kind="TypeFlag" Name="MultisampleCount" />
+                  </p:TypeAnnotation>
+                </Pad>
               </Patch>
             </Node>
             <Pad Id="IT8svODUQe4PBoIFRxwqyu" Bounds="1475,1082,159,85" ShowValueBox="true" isIOBox="true" Value="used for rendering stuff like cube maps, where you need one eye only">
@@ -661,6 +666,7 @@
           <Link Id="Md2U9zzCVxVP5UCvgVOxm8" Ids="Pjiyo8tvrwmQBxzelrkDh5,OCTbSgUFCZaNMNcKw9aVLJ" />
           <Link Id="PUlsdjIv4KbPyxRlU1uCbT" Ids="H9pvwfd29OvMI0iDQWVva7,G26YdACe7gxNNrcKT12SVf" />
           <Link Id="JiA2u1zBAJOLyTDOIURECl" Ids="AoAWjBzarCiLB00wSk6m1l,ET6qm2DDwfoPz3D1WjypjO" />
+          <Link Id="NrTCTvjSELGNC0f8phYObQ" Ids="QJgrV5DYD2fO659mxbIDtI,VnYk3R6q0vmNPv2QbXmcte" />
         </Patch>
       </Node>
       <!--

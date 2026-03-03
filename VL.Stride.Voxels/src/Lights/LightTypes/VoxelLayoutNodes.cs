@@ -17,7 +17,11 @@ namespace VL.Stride.Voxels.Lights.LightTypes
         public VoxelLayoutAnisotropicNode()
         {
             _maxBrightness = new(this, (x, v) => x.maxBrightness = v, 10.0f);
-            _storageMethod = new(this, (x, v) => x.StorageMethod = v);
+            _storageMethod = new(
+                this,
+                (x, v) => x.StorageMethod = v ?? new VoxelStorageMethodIndirect(),
+                new VoxelStorageMethodIndirect()
+            );
             _storageFormat = new(this, (x, v) => x.StorageFormat = v, StorageFormats.RGBA16F);
         }
 
@@ -44,7 +48,11 @@ namespace VL.Stride.Voxels.Lights.LightTypes
         public VoxelLayoutAnisotropicPairedNode()
         {
             _maxBrightness = new(this, (x, v) => x.maxBrightness = v, 10.0f);
-            _storageMethod = new(this, (x, v) => x.StorageMethod = v);
+            _storageMethod = new(
+                this,
+                (x, v) => x.StorageMethod = v ?? new VoxelStorageMethodIndirect(),
+                new VoxelStorageMethodIndirect()
+            );
             _storageFormat = new(this, (x, v) => x.StorageFormat = v, StorageFormats.RGBA16F);
         }
 
@@ -71,7 +79,11 @@ namespace VL.Stride.Voxels.Lights.LightTypes
         public VoxelLayoutIsotropicNode()
         {
             _maxBrightness = new(this, (x, v) => x.maxBrightness = v, 10.0f);
-            _storageMethod = new(this, (x, v) => x.StorageMethod = v);
+            _storageMethod = new(
+                this,
+                (x, v) => x.StorageMethod = v ?? new VoxelStorageMethodIndirect(),
+                new VoxelStorageMethodIndirect()
+            );
             _storageFormat = new(this, (x, v) => x.StorageFormat = v, StorageFormats.RGBA16F);
         }
 

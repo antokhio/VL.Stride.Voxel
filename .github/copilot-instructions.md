@@ -87,7 +87,7 @@ public class MarchCones : VoxelNodeMutable<VoxelMarchCones>
 9. **XML doc comments** — add `<summary>` on the class (tooltip in vvvv).
 10. **Omit explicit null defaults** — do not specify `= null` for reference type parameters in `Set*` methods, as reference types default to null implicitly.
 
-### Cachable<T> API
+## Cachable<T> API
 
 ```csharp
 // Construction — always in the node constructor
@@ -105,7 +105,7 @@ _field.SetValue(value);  // only applies if value differs from last
 T current = _field.Value;
 ```
 
-### CachableList<T> API
+## CachableList<T> API
 
 ```csharp
 // Construction
@@ -116,3 +116,8 @@ _items.SetValue(readOnlyList);
 
 // Set single item (wraps in single-element list)
 _items.SetValue(singleItem);
+```
+
+## Development Preferences
+
+- Avoid using the .NET modernization experience/tool in this workflow.

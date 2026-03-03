@@ -14,8 +14,22 @@ namespace VL.Stride.Voxels.Lights.LightTypes
 
         public VoxelStorageMethodIndirectNode()
         {
-            _tempStorageFormat = new(this, (x, v) => x.TempStorageFormat = v);
-            _filter = new(this, (x, v) => x.Filter = v);
+            _tempStorageFormat = new(
+                this,
+                (x, v) => x.TempStorageFormat = v ?? new VoxelFragmentPackFloatR11G11B10(),
+                new VoxelFragmentPackFloatR11G11B10()
+            );
+            _filter = new(
+                this,
+                (x, v) => x.Filter = v ?? new VoxelBufferWriteMax(),
+                new VoxelBufferWriteMax()
+            );
+        }
+
+        protected override void OnBuildInstance(VoxelStorageMethodIndirect instance)
+        {
+            instance.TempStorageFormat ??= new VoxelFragmentPackFloatR11G11B10();
+            instance.Filter ??= new VoxelBufferWriteMax();
         }
 
         public void SetTempStorageFormat(IVoxelFragmentPacker tempStorageFormat) =>
