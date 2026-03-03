@@ -249,6 +249,25 @@
             <Pin Id="EeVkW66CoYNMzOWbcaKgIM" Name="Multisample Count" Kind="OutputPin" />
           </Node>
           <Pad Id="JCdeHlmMND0L6VPucPg1rc" Comment="Multisample Count" Bounds="2001,710,54,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="2186,511,121,19" Id="RUXd4diZD94MfacG5Mrzih">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.GraphicsCompositor" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelPipelineProcessor" />
+            </p:NodeReference>
+            <Pin Id="D9SEmjZI7UaNhAAOs8mHFf" Name="Voxel Render Stage" Kind="InputPin" />
+            <Pin Id="RrQAe5l53vfN3lJRP1miWo" Name="Depth Clipping" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="RcRnlQNXMiCL1GXG8qbRWk" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="2191,591,99,26" Id="MAcrZ1uMRzEO4MB2lrYaD6">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.GraphicsCompositor.VoxelPipelineProcessor" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.GraphicsCompositor.VoxelPipelineProcessor" />
+              <Choice Kind="OperationCallFlag" Name="DepthClipping" />
+            </p:NodeReference>
+            <Pin Id="U6rToijz9KQOlhit69E40X" Name="Input" Kind="StateInputPin" />
+            <Pin Id="VqtBbCZvhflPDsMcQLBIMN" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="QZ7sdirRYwcNqfMHmTFS74" Name="Depth Clipping" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="DBAQfpxtb8JOLfJJGk6dxY" Name="Create" />
         <Patch Id="FWPEUIdqfJkPcyIZpwpvWs" Name="Update" />
@@ -271,6 +290,7 @@
         <Link Id="CyClgPm1YCUMH61FCj2yAy" Ids="SECbHEc7Le1MVShkuepDB4,Cg1OcYUAAY6LafFgOFWkCw" />
         <Link Id="VgVxEr6I8HlQTg7ZmuYNsk" Ids="QBd79HxIo94N3PwH5CVaxh,Ti6APYFkOM4MiIa7PcDQ4u" />
         <Link Id="KjBM2XA4Z57OH6AZ6UAulo" Ids="EeVkW66CoYNMzOWbcaKgIM,JCdeHlmMND0L6VPucPg1rc" />
+        <Link Id="RFYuBXEWloVLSIXkoBpjSX" Ids="RcRnlQNXMiCL1GXG8qbRWk,U6rToijz9KQOlhit69E40X" />
       </Patch>
     </Node>
   </Patch>

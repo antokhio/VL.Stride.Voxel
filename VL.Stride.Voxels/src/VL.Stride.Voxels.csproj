@@ -20,10 +20,6 @@
       <IncludeAssets>build;buildTransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GraphicsCompositor\" />
-    <Folder Include="Rendering\VoxelGI\" />
-  </ItemGroup>
   <Target Name="_CopyStrideVoxelsAssetsLocal" AfterTargets="Build">
     <ItemGroup>
       <_StrideVoxelsLocalAssetFiles Include="$(PkgStride_Voxels)\stride\Assets\**\*.*" />

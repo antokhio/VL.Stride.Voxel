@@ -6,17 +6,18 @@ using Stride.Rendering.SubsurfaceScattering;
 using Stride.Rendering.Voxels;
 using Stride.Rendering.Voxels.Debug;
 using VL.Core.Import;
-using VL.Stride.Rendering;
 
-namespace VL.Stride.Voxels.Rendering.Compositing
+namespace VL.Stride.Rendering.Voxels.Rendering
 {
     /// <summary>
     /// Forward renderer with voxel global illumination support.
     /// Wraps <see cref="VLForwardRendererVoxel"/> as an immutable copy-on-write node.
     /// </summary>
     [ProcessNode(Name = "VLForwardRendererVoxel")]
-    public class VLForwardRendererVoxelNode : VoxelNodeImmutable<VLForwardRendererVoxel>
+    public class VLForwardRendererVoxelNode : ProcessNodeBase<VLForwardRendererVoxel>
     {
+        protected override bool IsImmutable => false;
+
         private readonly Cachable<ClearRenderer> _clear;
         private readonly Cachable<RenderStage> _opaqueRenderStage;
         private readonly Cachable<RenderStage> _transparentRenderStage;

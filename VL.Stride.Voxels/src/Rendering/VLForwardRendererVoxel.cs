@@ -3,10 +3,8 @@ using Stride.Rendering.Lights;
 using Stride.Rendering.Shadows;
 using Stride.Rendering.Voxels;
 using Stride.Rendering.Voxels.Debug;
-using VL.Stride.Rendering;
-using MeshRenderFeature = Stride.Rendering.MeshRenderFeature;
 
-namespace VL.Stride.Voxels.Rendering.Compositing
+namespace VL.Stride.Rendering.Voxels.Rendering
 {
     /// <summary>
     /// VLForwardRenderer extended with voxel GI support.
