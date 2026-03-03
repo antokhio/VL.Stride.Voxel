@@ -1,6 +1,6 @@
-# VL.Stride.Voxels
-
 <img src="hero.png" width="100%" alt="VL.Stride.Voxels Banner">
+
+# VL.Stride.Voxels
 
 A voxel rendering and compositing integration for [vvvv](https://vvvv.org) and [Stride](https://github.com/stride3d/stride).
 
