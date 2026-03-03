@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="FOhT4j2h6s4M8BQvvC2l15" LanguageVersion="2025.7.1-0174-g187f627d60" Version="0.128">
+  <NugetDependency Id="ThSmc905h9rLihYqBPm0y4" Location="VL.CoreLib" Version="2025.7.1-0174-g187f627d60" />
+  <Patch Id="H2A3XufZPOEPJZ4yLV73mi">
+    <Canvas Id="SBWB99zes2dL3XhP1FQD9F" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="HoAHDg1mQ8aO9l2w0AY56b">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="K8BfLktqmB2NF5EGvV756O">
+        <Canvas Id="DvfEmmfKeexK9pW0hw8WTN" CanvasType="Group">
+          <Node Bounds="336,221,125,19" Id="RP39PDRDL2yOysiGeuoG1j">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Marching" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelMarchCone" />
+            </p:NodeReference>
+            <Pin Id="OIXgMxfvTnsMcCHjGPl2mX" Name="Edit Mode" Kind="InputPin" />
+            <Pin Id="UcR8T3qcqYuPZuot7meQKc" Name="Fast" Kind="InputPin" />
+            <Pin Id="NHxakImjn7XMIWKhXSfMsN" Name="Steps" Kind="InputPin" />
+            <Pin Id="RuCNvqqxn0DNicbVpIoD5z" Name="Step Scale" Kind="InputPin" />
+            <Pin Id="Uijr5WkaPrtOh16qvubump" Name="Cone Ratio" Kind="InputPin" />
+            <Pin Id="KdbezooSeEnMlcnqn2ZCNr" Name="Start Offset" Kind="InputPin" />
+            <Pin Id="VQorLOfukTYOpOsWDKsgie" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="534,271,205,19" Id="FRCL1RxGdR2OuI10hqBvtJ">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelVolumeComponent" />
+            </p:NodeReference>
+            <Pin Id="Cl0ld6RrBxnObnF4WOWrgD" Name="Voxelize" Kind="InputPin" />
+            <Pin Id="VlEPEd0ayuOPhUM28SKnOe" Name="Voxelization Method" Kind="InputPin" />
+            <Pin Id="CQJXdtO7jGiQDMxXZQUsum" Name="Storage" Kind="InputPin" />
+            <Pin Id="Pg8yaamhJWyPJOYrypMyDs" Name="Attributes" Kind="InputPin" />
+            <Pin Id="OJ9J5GqPEtoNE5VdTueQV6" Name="Voxel Volume Size" Kind="InputPin" />
+            <Pin Id="JGKuaFmwCSlQCalQfpMYIl" Name="Aproximate Voxel Size" Kind="InputPin" />
+            <Pin Id="Askwk2fWvMlQBlH5GybMzt" Name="Voxel Grid Snapping" Kind="InputPin" />
+            <Pin Id="MdkOvv2Ew3WNeUcP799xLM" Name="Visualize Voxels" Kind="InputPin" />
+            <Pin Id="BFUisQmnNYVQbIcFWOfD7p" Name="Visualize Index" Kind="InputPin" />
+            <Pin Id="M9I2opjG9OPOYFeslI36y9" Name="Visualization" Kind="InputPin" />
+            <Pin Id="EwPQjditZxvNyGy41lo71G" Name="Enabled" Kind="InputPin" />
+            <Pin Id="F52zPlywhWtLNijLzFZV0S" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="534,351,105,26" Id="OMqomOdBqt2P21HYtLc6Fx">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" />
+              <Choice Kind="OperationCallFlag" Name="Attributes" />
+            </p:NodeReference>
+            <Pin Id="Ok5eRyzsPd8LLT0T2gkxkV" Name="Input" Kind="StateInputPin" />
+            <Pin Id="HZakJQrTuRTO57s1RQRbyy" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="EbvZWAzw6TbP2VPox2m1P8" Name="Attributes" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="534,451,107,26" Id="H3kHv2HaZTxP6ECHHohN6W">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" />
+              <Choice Kind="OperationCallFlag" Name="VoxelizationMethod" />
+            </p:NodeReference>
+            <Pin Id="JQKtPPKDfkkLV4Q7Oaa1GV" Name="Input" Kind="StateInputPin" />
+            <Pin Id="GCwy6y7tCoJPitruTOtcxS" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="Sx0aKtUobxdPqpA6b6lbGB" Name="Voxelization Method" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="534,551,105,26" Id="PtIN6SOKenQPDfOoeZcWHI">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" />
+              <Choice Kind="OperationCallFlag" Name="Storage" />
+            </p:NodeReference>
+            <Pin Id="AIms2LUUZ2LMNSM9ysWoyI" Name="Input" Kind="StateInputPin" />
+            <Pin Id="CwSBI0ZivMnOTXs3PAngux" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="IGtj7wafKd0MrbuG7odkJA" Name="Storage" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="534,621,105,26" Id="MgzhwEPjDSMMJfCFGoL5PG">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" />
+              <Choice Kind="OperationCallFlag" Name="VoxelVolumeSize" />
+            </p:NodeReference>
+            <Pin Id="Smm8x2tuPySMh8uHMCuVMU" Name="Input" Kind="StateInputPin" />
+            <Pin Id="IrjYOJukdblPlX9WeaxJCV" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="UZjKfi91VusMTwUcwhWc9I" Name="Voxel Volume Size" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="534,691,113,26" Id="Nj1WO2eocWjOs66XYoco8o">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" />
+              <Choice Kind="OperationCallFlag" Name="AproximateVoxelSize" />
+            </p:NodeReference>
+            <Pin Id="KEnvc3NXdt1O6KPzAQDUp4" Name="Input" Kind="StateInputPin" />
+            <Pin Id="AYcX1bUNHk5OKdyLvV5fK1" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="CvtIw30SHaQNELNEzYKVnD" Name="Aproximate Voxel Size" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="521,761,105,26" Id="DTnOq0ASZScNqaw2B0NNWH">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" />
+              <Choice Kind="OperationCallFlag" Name="VoxelGridSnapping" />
+            </p:NodeReference>
+            <Pin Id="UZs7FZs9xY2PO3fWoGvLab" Name="Input" Kind="StateInputPin" />
+            <Pin Id="UtyYnV2ZSuhP2hzP9mDxKO" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="Bitl5CNs4B3OVuP9sSMcx3" Name="Voxel Grid Snapping" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="892,431,145,19" Id="ON4kVu94V7fPMM0W6UmZyy">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.StorageMethod" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelStorageMethodIndirect" />
+            </p:NodeReference>
+            <Pin Id="GPyfs4dSBGINgr9OoXrpvk" Name="Temp Storage Format" Kind="InputPin" />
+            <Pin Id="GDvqnt8Kz1cNvl8NWUY5S1" Name="Filter" Kind="InputPin" />
+            <Pin Id="RsmfTyB3EQALl0NPASvVyb" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="892,480,117,26" Id="Sr2dO1s8ajnLXCl02LlQeY">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.StorageMethod.VoxelStorageMethodIndirect" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.StorageMethod.VoxelStorageMethodIndirect" />
+              <Choice Kind="OperationCallFlag" Name="TempStorageFormat" />
+            </p:NodeReference>
+            <Pin Id="Q7lDbxhy7HIOfHH9MpaOxl" Name="Input" Kind="StateInputPin" />
+            <Pin Id="T06UtdhVQcyNTjASowfJRx" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="MN4SfKCwDAVLJKIz45wXFH" Name="Temp Storage Format" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="892,561,117,26" Id="SEK8Edk2b9sLPIZM5jMyC5">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.StorageMethod.VoxelStorageMethodIndirect" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.StorageMethod.VoxelStorageMethodIndirect" />
+              <Choice Kind="OperationCallFlag" Name="Filter" />
+            </p:NodeReference>
+            <Pin Id="CSSW1fDkxZLMAgD70MtUbF" Name="Input" Kind="StateInputPin" />
+            <Pin Id="RXv8ASOCXibOSf2BJXgAP9" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="UMT0d1ZCx7aPtyY3YOW9Kt" Name="Filter" Kind="OutputPin" />
+          </Node>
+          <Pad Id="E925QEsTjfRMMV4DGIqwMS" Bounds="925,300,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="S3Aj0GVo1K0MGSbvaPalHA" Comment="Temp Storage Format" Bounds="1069,550,35,15" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="TypeFlag" Name="IVoxelFragmentPacker" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="1212,431,118,19" Id="TaremN1MgIKQEK7ci9ZlGZ">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelStorage" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelStorageClipmaps" />
+            </p:NodeReference>
+            <Pin Id="O5EwtqRQsMlNp6cKKMQy4J" Name="Clip Resolution" Kind="InputPin" />
+            <Pin Id="Qj6ajHG5RfCNjOs4dj9GXi" Name="Updates Per Frame" Kind="InputPin" />
+            <Pin Id="EvlvilrNwL2PL0RWFtJ16t" Name="Downsample Finer Clip Maps" Kind="InputPin" />
+            <Pin Id="VosNf7VLUyHLe5si2N3HZs" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1224,481,97,26" Id="BpRMTtNtzIKMlZNeuKTz6s">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelStorage.VoxelStorageClipmaps" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelStorage.VoxelStorageClipmaps" />
+              <Choice Kind="OperationCallFlag" Name="ClipResolution" />
+            </p:NodeReference>
+            <Pin Id="OHjLnh0ihe0OPcKq4sSc9r" Name="Input" Kind="StateInputPin" />
+            <Pin Id="D8JufIfeUh5MNMqkvVur0t" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="V47S4nT6EXfPRTTOsZE6SW" Name="Clip Resolution" Kind="OutputPin" />
+          </Node>
+          <Pad Id="SXNVWPYFUzpPv9jqIv6WxA" Comment="Clip Resolution" Bounds="1349,610,54,15" ShowValueBox="true" isIOBox="true" Value="x128">
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels.VoxelStorageClipmaps" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="TypeFlag" Name="Resolutions" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="N2h51qXqtD8OKmNxOeAb8z" Bounds="1445,490,54,15" ShowValueBox="true" isIOBox="true" Value="x128">
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels.VoxelStorageClipmaps" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="TypeFlag" Name="Resolutions" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="1347,721,97,26" Id="U7ALUyta0h1LUC27aV85Qd">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelStorage.VoxelStorageClipmaps" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelStorage.VoxelStorageClipmaps" />
+              <Choice Kind="OperationCallFlag" Name="UpdatesPerFrame" />
+            </p:NodeReference>
+            <Pin Id="LpSmhTclWWlLN4glwNoYQS" Name="Input" Kind="StateInputPin" />
+            <Pin Id="TbpOV7G5u6HN706Tsk3xIc" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="DvaAYkP9989NuvQHVvMFFr" Name="Updates Per Frame" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1550,511,124,19" Id="SqJl0UgfqCfNqdPSu3lAwc">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.Layout" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelLayoutAnisotropic" />
+            </p:NodeReference>
+            <Pin Id="P4eeNFhqdauMFsaXSA6SrE" Name="Max Brightness" Kind="InputPin" />
+            <Pin Id="SBhOxg4LVW3MEjfWolY6Y0" Name="Storage Method" Kind="InputPin" />
+            <Pin Id="Ni3fHhGOtjPPN8cPAHCmzP" Name="Storage Format" Kind="InputPin" />
+            <Pin Id="Nzw6pwDIWPWPhmcSAZskEH" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1550,571,83,26" Id="FlkmqnTAbtpM3R1GCTLFBJ">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.Layout.VoxelLayoutBase" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.Layout.VoxelLayoutBase" />
+              <Choice Kind="OperationCallFlag" Name="StorageFormat" />
+            </p:NodeReference>
+            <Pin Id="SrqDXsmUttnQU6fxg4aU88" Name="Input" Kind="StateInputPin" />
+            <Pin Id="RPEgHqksHgTMt7taaZz1Oh" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="AUTn5yESLMGOWUe0SaEGyw" Name="Storage Format" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1154,771,208,19" Id="Alj0Z0ZEEpXOM8jA7BFjhX">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.Modifiers.EmissionOpacityFilters" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="EmissionOpacityFilters" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelModifierEmissionOpacityAntiAliasing" />
+            </p:NodeReference>
+            <Pin Id="NB6kTBqmSk4NZ70XovHiSZ" Name="Enabled" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="FCYQn6jLBQIQDxy0bfBwsd" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1154,831,66,26" Id="S3GFuQxV35vPOwCJuAcSPc">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.Modifiers.VoxelModifier" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.Modifiers.VoxelModifier" />
+              <Choice Kind="OperationCallFlag" Name="Enabled" />
+            </p:NodeReference>
+            <Pin Id="EMk0eLzE52bLFiE4tPkOkT" Name="Input" Kind="StateInputPin" />
+            <Pin Id="KfmVklCXTXcOZaxCKcAhgu" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="SECbHEc7Le1MVShkuepDB4" Name="Enabled" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Cg1OcYUAAY6LafFgOFWkCw" Comment="Enabled" Bounds="1217,890,35,35" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="1871,551,139,19" Id="Dhm8HlPQvpGMzH8NmVuncL">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelizationMethodTriAxis" />
+            </p:NodeReference>
+            <Pin Id="HPK12WF6EnJOXLvXcBhQBX" Name="Multisample Count" Kind="InputPin" />
+            <Pin Id="L3r9Yf2gmoHNAwL8Pui8uN" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1880,611,154,19" Id="G0dz7ONXaueLxTBi2LiLzT">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelizationMethodSingleAxis" />
+            </p:NodeReference>
+            <Pin Id="SudVGfoJZa6M5IvEZl2bES" Name="Voxelization Axis" Kind="InputPin" />
+            <Pin Id="HnZ4Y3XqyZrPBmqblOkEwh" Name="Multisample Count" Kind="InputPin" DefaultValue="X8" />
+            <Pin Id="QBd79HxIo94N3PwH5CVaxh" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1880,661,124,26" Id="LNu4WsQs0LqL4GQ2NKTcAl">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod.VoxelizationMethodSingleAxis" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod.VoxelizationMethodSingleAxis" />
+              <Choice Kind="OperationCallFlag" Name="MultisampleCount" />
+            </p:NodeReference>
+            <Pin Id="Ti6APYFkOM4MiIa7PcDQ4u" Name="Input" Kind="StateInputPin" />
+            <Pin Id="NSLlEUPJL7iPZ2dG89HRno" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="EeVkW66CoYNMzOWbcaKgIM" Name="Multisample Count" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JCdeHlmMND0L6VPucPg1rc" Comment="Multisample Count" Bounds="2001,710,54,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="2186,511,121,19" Id="RUXd4diZD94MfacG5Mrzih">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.GraphicsCompositor" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelPipelineProcessor" />
+            </p:NodeReference>
+            <Pin Id="D9SEmjZI7UaNhAAOs8mHFf" Name="Voxel Render Stage" Kind="InputPin" />
+            <Pin Id="RrQAe5l53vfN3lJRP1miWo" Name="Depth Clipping" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="RcRnlQNXMiCL1GXG8qbRWk" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="2191,591,99,26" Id="MAcrZ1uMRzEO4MB2lrYaD6">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.GraphicsCompositor.VoxelPipelineProcessor" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.GraphicsCompositor.VoxelPipelineProcessor" />
+              <Choice Kind="OperationCallFlag" Name="DepthClipping" />
+            </p:NodeReference>
+            <Pin Id="U6rToijz9KQOlhit69E40X" Name="Input" Kind="StateInputPin" />
+            <Pin Id="VqtBbCZvhflPDsMcQLBIMN" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="QZ7sdirRYwcNqfMHmTFS74" Name="Depth Clipping" Kind="OutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="DBAQfpxtb8JOLfJJGk6dxY" Name="Create" />
+        <Patch Id="FWPEUIdqfJkPcyIZpwpvWs" Name="Update" />
+        <ProcessDefinition Id="CpNGndo4PRVOkMDkKujpTp">
+          <Fragment Id="NlhZTNTeXEUQXi3Fustp5m" Patch="DBAQfpxtb8JOLfJJGk6dxY" Enabled="true" />
+          <Fragment Id="AhWuL71ZeL8PWrImmO7Y9O" Patch="FWPEUIdqfJkPcyIZpwpvWs" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="ItYa4ckSiOtMQfSaF1UWhI" Ids="F52zPlywhWtLNijLzFZV0S,Ok5eRyzsPd8LLT0T2gkxkV" />
+        <Link Id="LaGIuyuNSiFMPbIfxzdh3O" Ids="HZakJQrTuRTO57s1RQRbyy,JQKtPPKDfkkLV4Q7Oaa1GV" />
+        <Link Id="KgdUUoy0spoM7QHNLkZBPZ" Ids="GCwy6y7tCoJPitruTOtcxS,AIms2LUUZ2LMNSM9ysWoyI" />
+        <Link Id="Hm26wupSK1LPN1ZWZLOOnm" Ids="CwSBI0ZivMnOTXs3PAngux,Smm8x2tuPySMh8uHMCuVMU" />
+        <Link Id="AAQoXrtgRLjNTZ1yBdENei" Ids="IrjYOJukdblPlX9WeaxJCV,KEnvc3NXdt1O6KPzAQDUp4" />
+        <Link Id="IiyKR232lF5QEGL7773e1m" Ids="AYcX1bUNHk5OKdyLvV5fK1,UZs7FZs9xY2PO3fWoGvLab" />
+        <Link Id="RJsbWqVVGodNtRew7xi4hn" Ids="RsmfTyB3EQALl0NPASvVyb,Q7lDbxhy7HIOfHH9MpaOxl" />
+        <Link Id="JLQ9ul7OIveNqloMUtGyQu" Ids="T06UtdhVQcyNTjASowfJRx,CSSW1fDkxZLMAgD70MtUbF" />
+        <Link Id="CCluCpsgs7tPzoirK4NfY2" Ids="VosNf7VLUyHLe5si2N3HZs,OHjLnh0ihe0OPcKq4sSc9r" />
+        <Link Id="U2qf1W76gxDMLklpqR5DjI" Ids="D8JufIfeUh5MNMqkvVur0t,LpSmhTclWWlLN4glwNoYQS" />
+        <Link Id="IXFfqcfpDx2Mtm6LvMfJwg" Ids="Nzw6pwDIWPWPhmcSAZskEH,SrqDXsmUttnQU6fxg4aU88" />
+        <Link Id="EYxFwuy6P5mP61dCxTEZ1R" Ids="FCYQn6jLBQIQDxy0bfBwsd,EMk0eLzE52bLFiE4tPkOkT" />
+        <Link Id="CyClgPm1YCUMH61FCj2yAy" Ids="SECbHEc7Le1MVShkuepDB4,Cg1OcYUAAY6LafFgOFWkCw" />
+        <Link Id="VgVxEr6I8HlQTg7ZmuYNsk" Ids="QBd79HxIo94N3PwH5CVaxh,Ti6APYFkOM4MiIa7PcDQ4u" />
+        <Link Id="KjBM2XA4Z57OH6AZ6UAulo" Ids="EeVkW66CoYNMzOWbcaKgIM,JCdeHlmMND0L6VPucPg1rc" />
+        <Link Id="RFYuBXEWloVLSIXkoBpjSX" Ids="RcRnlQNXMiCL1GXG8qbRWk,U6rToijz9KQOlhit69E40X" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GQflMLrL9YGLXPgQvpMCyQ" Location="VL.Stride.Voxels" Version="0.0.0" />
+  <NugetDependency Id="KMKdpHApjhrMAIIT5zSQbx" Location="VL.Stride" Version="2025.7.1-0174-g187f627d60" />
+</Document>

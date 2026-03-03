@@ -1,13 +1,13 @@
 ﻿using Stride.Rendering.Voxels;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxels.Lights.LightTypes
+namespace VL.Stride.Rendering.Voxels.Voxelization.VoxelStorage
 {
     /// <summary>
     /// Clipmap-based voxel storage with configurable resolution and update strategy.
     /// </summary>
     [ProcessNode(Name = "VoxelStorageClipmaps")]
-    public class VoxelStorageClipmapsNode : VoxelNodeImmutable<VoxelStorageClipmaps>
+    public class VoxelStorageClipmapsNode : ProcessNodeBase<VoxelStorageClipmaps>
     {
         private readonly Cachable<VoxelStorageClipmaps.Resolutions> _clipResolution;
         private readonly Cachable<VoxelStorageClipmaps.UpdateMethods> _updatesPerFrame;

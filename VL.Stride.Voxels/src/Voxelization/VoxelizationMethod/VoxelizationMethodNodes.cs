@@ -2,15 +2,16 @@
 using Stride.Rendering.Voxels;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxels.Lights.LightTypes
+namespace VL.Stride.Rendering.Voxels.Voxelization.VoxelizationMethod
 {
     /// <summary>
     /// Voxelization along a single configurable axis.
     /// </summary>
     [ProcessNode(Name = "VoxelizationMethodSingleAxis")]
-    public class VoxelizationMethodSingleAxisNode : VoxelNodeImmutable<VoxelizationMethodSingleAxis>
+    public class VoxelizationMethodSingleAxisNode : ProcessNodeBase<VoxelizationMethodSingleAxis>
     {
         private readonly Cachable<VoxelizationMethodSingleAxis.Axis> _voxelizationAxis;
+        private readonly Cachable<MultisampleCount> _multisampleCount;
 
         public VoxelizationMethodSingleAxisNode()
         {
@@ -19,11 +20,15 @@ namespace VL.Stride.Voxels.Lights.LightTypes
                 (x, v) => x.VoxelizationAxis = v,
                 VoxelizationMethodSingleAxis.Axis.Y
             );
+            _multisampleCount = new(this, (x, v) => x.MultisampleCount = v, MultisampleCount.X8);
         }
 
         public void SetVoxelizationAxis(
             VoxelizationMethodSingleAxis.Axis voxelizationAxis = VoxelizationMethodSingleAxis.Axis.Y
         ) => _voxelizationAxis.SetValue(voxelizationAxis);
+
+        public void SetMultisampleCount(MultisampleCount multisampleCount = MultisampleCount.X8) =>
+            _multisampleCount.SetValue(multisampleCount);
     }
 
     /// <summary>
@@ -31,7 +36,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// </summary>
     [ProcessNode(Name = "VoxelizationMethodDominantAxis")]
     public class VoxelizationMethodDominantAxisNode
-        : VoxelNodeImmutable<VoxelizationMethodDominantAxis>
+        : ProcessNodeBase<VoxelizationMethodDominantAxis>
     {
         private readonly Cachable<MultisampleCount> _multisampleCount;
 
@@ -48,7 +53,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Voxelization along all three axes with configurable multisampling.
     /// </summary>
     [ProcessNode(Name = "VoxelizationMethodTriAxis")]
-    public class VoxelizationMethodTriAxisNode : VoxelNodeImmutable<VoxelizationMethodTriAxis>
+    public class VoxelizationMethodTriAxisNode : ProcessNodeBase<VoxelizationMethodTriAxis>
     {
         private readonly Cachable<MultisampleCount> _multisampleCount;
 

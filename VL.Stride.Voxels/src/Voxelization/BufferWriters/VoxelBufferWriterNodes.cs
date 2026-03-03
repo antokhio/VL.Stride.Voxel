@@ -1,17 +1,17 @@
 ﻿using Stride.Rendering.Voxels;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxels.Lights.LightTypes
+namespace VL.Stride.Rendering.Voxels.Voxelization.BufferWriters
 {
     /// <summary>
     /// Writes voxel buffer data using direct assignment.
     /// </summary>
     [ProcessNode(Name = "VoxelBufferWriteAssign")]
-    public class VoxelBufferWriteAssignNode : VoxelNodeImmutable<VoxelBufferWriteAssign> { }
+    public class VoxelBufferWriteAssignNode : ProcessNodeBase<VoxelBufferWriteAssign> { }
 
     /// <summary>
     /// Writes voxel buffer data using max blending.
     /// </summary>
     [ProcessNode(Name = "VoxelBufferWriteMax")]
-    public class VoxelBufferWriteMaxNode : VoxelNodeImmutable<VoxelBufferWriteMax> { }
+    public class VoxelBufferWriteMaxNode : ProcessNodeBase<VoxelBufferWriteMax> { }
 }

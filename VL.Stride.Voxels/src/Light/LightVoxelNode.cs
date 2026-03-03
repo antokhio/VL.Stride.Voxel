@@ -2,13 +2,13 @@
 using Stride.Rendering.Voxels.VoxelGI;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxels.Lights.LightTypes
+namespace VL.Stride.Rendering.Voxels.Light
 {
     /// <summary>
     /// Voxel-based environment light using diffuse and specular marchers.
     /// </summary>
     [ProcessNode(Name = "LightVoxel")]
-    public class LightVoxelNode : VoxelNodeMutable<LightVoxel>
+    public class LightVoxelNode : ProcessNodeBase<LightVoxel>
     {
         private readonly Cachable<VoxelVolumeComponent> _volume;
         private readonly Cachable<int> _attributeIndex;
@@ -19,25 +19,28 @@ namespace VL.Stride.Voxels.Lights.LightTypes
 
         public LightVoxelNode()
         {
-            _volume = new(this, x => x.Volume, (x, v) => x.Volume = v);
-            _attributeIndex = new(this, x => x.AttributeIndex, (x, v) => x.AttributeIndex = v);
-            _diffuseMarcher = new(this, x => x.DiffuseMarcher, (x, v) => x.DiffuseMarcher = v);
-            _specularMarcher = new(this, x => x.SpecularMarcher, (x, v) => x.SpecularMarcher = v);
-            _bounceIntensityScale = new(
+            _volume = new(this, (x, v) => x.Volume = v);
+            _attributeIndex = new(this, (x, v) => x.AttributeIndex = v, 0);
+
+            _diffuseMarcher = new(
                 this,
-                x => x.BounceIntensityScale,
-                (x, v) => x.BounceIntensityScale = v
+                (x, v) => x.DiffuseMarcher = v,
+                new VoxelMarchSetHemisphere6(new VoxelMarchConePerMipmap())
             );
-            _specularIntensityScale = new(
+
+            _specularMarcher = new(
                 this,
-                x => x.SpecularIntensityScale,
-                (x, v) => x.SpecularIntensityScale = v
+                (x, v) => x.SpecularMarcher = v,
+                new VoxelMarchCone(30, 0.5f, 1.0f)
             );
+
+            _bounceIntensityScale = new(this, (x, v) => x.BounceIntensityScale = v, 0f);
+            _specularIntensityScale = new(this, (x, v) => x.SpecularIntensityScale = v, 0f);
         }
 
-        public void SetVolume(VoxelVolumeComponent volume) => _volume.SetValue(volume);
+        public void SetVolume(VoxelVolumeComponent volume = null) => _volume.SetValue(volume);
 
-        public void SetAttributeIndex(int attributeIndex) =>
+        public void SetAttributeIndex(int attributeIndex = 0) =>
             _attributeIndex.SetValue(attributeIndex);
 
         public void SetDiffuseMarcher(IVoxelMarchSet diffuseMarcher) =>
@@ -46,10 +49,10 @@ namespace VL.Stride.Voxels.Lights.LightTypes
         public void SetSpecularMarcher(IVoxelMarchMethod specularMarcher) =>
             _specularMarcher.SetValue(specularMarcher);
 
-        public void SetBounceIntensityScale(float bounceIntensityScale) =>
+        public void SetBounceIntensityScale(float bounceIntensityScale = 0f) =>
             _bounceIntensityScale.SetValue(bounceIntensityScale);
 
-        public void SetSpecularIntensityScale(float specularIntensityScale) =>
+        public void SetSpecularIntensityScale(float specularIntensityScale = 0f) =>
             _specularIntensityScale.SetValue(specularIntensityScale);
     }
 }

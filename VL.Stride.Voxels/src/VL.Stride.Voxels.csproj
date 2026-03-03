@@ -7,13 +7,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>VL.Stride.Rendering.Voxels</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference
-      Include="Stride.Voxels"
-      Version="$(StrideVersion)"
-      GeneratePathProperty="true"
-    />
+    <PackageReference Include="Stride.Voxels" Version="$(StrideVersion)" GeneratePathProperty="true" />
     <PackageReference Include="VL.Core" Version="$(VLVersion)" />
     <PackageReference Include="VL.Stride.Runtime" Version="$(VLVersion)" />
   </ItemGroup>
@@ -27,10 +24,6 @@
     <ItemGroup>
       <_StrideVoxelsLocalAssetFiles Include="$(PkgStride_Voxels)\stride\Assets\**\*.*" />
     </ItemGroup>
-    <Copy
-      SourceFiles="@(_StrideVoxelsLocalAssetFiles)"
-      DestinationFiles="@(_StrideVoxelsLocalAssetFiles->'$(MSBuildProjectDirectory)\..\shaders\%(RecursiveDir)%(Filename)%(Extension)')"
-      SkipUnchangedFiles="true"
-    />
+    <Copy SourceFiles="@(_StrideVoxelsLocalAssetFiles)" DestinationFiles="@(_StrideVoxelsLocalAssetFiles->'$(MSBuildProjectDirectory)\..\shaders\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
 </Project>

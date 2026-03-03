@@ -1,0 +1,30 @@
+﻿using Stride.Rendering.Voxels;
+using VL.Core.Import;
+
+namespace VL.Stride.Rendering.Voxels.Marching
+{
+    /// <summary>
+    /// Beam marcher with configurable step count, scale, and diameter.
+    /// </summary>
+    [ProcessNode(Name = "VoxelMarchBeam")]
+    public class VoxelMarchBeamNode : ProcessNodeBase<VoxelMarchBeam>
+    {
+        private readonly Cachable<int> _steps;
+        private readonly Cachable<float> _stepScale;
+        private readonly Cachable<float> _beamDiameter;
+
+        public VoxelMarchBeamNode()
+        {
+            _steps = new(this, (x, v) => x.Steps = v, 9);
+            _stepScale = new(this, (x, v) => x.StepScale = v, 1.0f);
+            _beamDiameter = new(this, (x, v) => x.BeamDiameter = v, 1.0f);
+        }
+
+        public void SetSteps(int steps = 9) => _steps.SetValue(steps);
+
+        public void SetStepScale(float stepScale = 1.0f) => _stepScale.SetValue(stepScale);
+
+        public void SetBeamDiameter(float beamDiameter = 1.0f) =>
+            _beamDiameter.SetValue(beamDiameter);
+    }
+}
