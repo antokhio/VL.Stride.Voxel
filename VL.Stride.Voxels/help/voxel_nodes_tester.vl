@@ -15,43 +15,20 @@
       </p:NodeReference>
       <Patch Id="K8BfLktqmB2NF5EGvV756O">
         <Canvas Id="DvfEmmfKeexK9pW0hw8WTN" CanvasType="Group">
-          <Node Bounds="353,291,125,19" Id="U2hW88QKX82P2fgAzoawwC">
-            <p:NodeReference LastCategoryFullName="Stride.Voxels.Lights.LightTypes" LastDependency="VL.Stride.Voxels.vl">
+          <Node Bounds="336,221,125,19" Id="RP39PDRDL2yOysiGeuoG1j">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Marching" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="LightVoxel" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelMarchCone" />
             </p:NodeReference>
-            <Pin Id="FC4y8VzSyB6NtSq70qrh1D" Name="Update" Kind="ApplyPin" />
-            <Pin Id="LZqwhpv70VpLahD2dBmqSV" Name="Volume" Kind="InputPin" />
-            <Pin Id="IYKsnwXcuVsNILW9RkW2vz" Name="Attribute Index" Kind="InputPin" />
-            <Pin Id="BtDWKLjxR6rN4mbeAtFVYO" Name="Diffuse Marcher" Kind="InputPin" />
-            <Pin Id="H1d32biX77CMksXos041Rh" Name="Specular Marcher" Kind="InputPin" />
-            <Pin Id="IoRXfIJQDkyN7oZJLGfYlN" Name="Bounce Intensity Scale" Kind="InputPin" />
-            <Pin Id="LNE6lJFfx6BP89LPgPa3pD" Name="Specular Intensity Scale" Kind="InputPin" />
-            <Pin Id="AKGnkICSNYuPO625nxFAAG" Name="Output" Kind="OutputPin" />
+            <Pin Id="QTbAOBIcUIINNRpAWqNLVs" Name="Update" Kind="ApplyPin" />
+            <Pin Id="OIXgMxfvTnsMcCHjGPl2mX" Name="Edit Mode" Kind="InputPin" />
+            <Pin Id="UcR8T3qcqYuPZuot7meQKc" Name="Fast" Kind="InputPin" />
+            <Pin Id="NHxakImjn7XMIWKhXSfMsN" Name="Steps" Kind="InputPin" />
+            <Pin Id="RuCNvqqxn0DNicbVpIoD5z" Name="Step Scale" Kind="InputPin" />
+            <Pin Id="Uijr5WkaPrtOh16qvubump" Name="Cone Ratio" Kind="InputPin" />
+            <Pin Id="KdbezooSeEnMlcnqn2ZCNr" Name="Start Offset" Kind="InputPin" />
+            <Pin Id="VQorLOfukTYOpOsWDKsgie" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="370,341,91,26" Id="Ep0YON2iifSLXqjbwjDuxk">
-            <p:NodeReference LastCategoryFullName="Stride.Voxels.LightVoxel" LastDependency="VL.Stride.Voxels.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Stride.Voxels.LightVoxel" />
-              <Choice Kind="OperationCallFlag" Name="SpecularMarcher" />
-            </p:NodeReference>
-            <Pin Id="I0rz2VvsKuQMfLjwtUYKGe" Name="Input" Kind="StateInputPin" />
-            <Pin Id="Qol67ggCON1LHI4Ff7Ep6H" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="JCEeepPCozMO2a1l2V7BnC" Name="Specular Marcher" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="433,251,94,19" Id="DFjERO4Gn08LxRMLHrjIRj">
-            <p:NodeReference LastCategoryFullName="Stride.Voxels.Lights.LightTypes" LastDependency="VL.Stride.Voxels.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Stride.Voxels.Lights.LightTypes" />
-              <Choice Kind="ProcessAppFlag" Name="VoxelMarchBeam" />
-            </p:NodeReference>
-            <Pin Id="TheFyqgem5LLK0sFan720U" Name="Update" Kind="ApplyPin" />
-            <Pin Id="S0Y1x5mr3gAOt4l5Wfs8ql" Name="Steps" Kind="InputPin" />
-            <Pin Id="RHckaXsxuXgLRkV0lA2L8H" Name="Step Scale" Kind="InputPin" />
-            <Pin Id="UalGyHoqkUJMijsQd2j7zr" Name="Beam Diameter" Kind="InputPin" />
-            <Pin Id="SPww0QNHCnvOQxNleLT4H2" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Pad Id="H6P4Vv5SHoiNdoX6Bk3oWf" Comment="Specular Marcher" Bounds="458,400,183,137" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="DBAQfpxtb8JOLfJJGk6dxY" Name="Create" />
         <Patch Id="FWPEUIdqfJkPcyIZpwpvWs" Name="Update" />
@@ -59,9 +36,6 @@
           <Fragment Id="NlhZTNTeXEUQXi3Fustp5m" Patch="DBAQfpxtb8JOLfJJGk6dxY" Enabled="true" />
           <Fragment Id="AhWuL71ZeL8PWrImmO7Y9O" Patch="FWPEUIdqfJkPcyIZpwpvWs" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="S0fgzEukG6pLJVdJJWc1LM" Ids="AKGnkICSNYuPO625nxFAAG,I0rz2VvsKuQMfLjwtUYKGe" />
-        <Link Id="HSalI5GlYJcMZ7fztxCp3M" Ids="SPww0QNHCnvOQxNleLT4H2,H1d32biX77CMksXos041Rh" />
-        <Link Id="QCgyJjpg71ONtHATGBtKYt" Ids="JCEeepPCozMO2a1l2V7BnC,H6P4Vv5SHoiNdoX6Bk3oWf" />
       </Patch>
     </Node>
   </Patch>

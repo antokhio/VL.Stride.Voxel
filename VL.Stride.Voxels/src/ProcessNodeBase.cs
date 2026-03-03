@@ -1,7 +1,7 @@
 ﻿using Stride.Rendering.Materials;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxels
+namespace VL.Stride.Rendering.Voxels
 {
     [ProcessNode]
     public abstract class ProcessNodeBase<TInstance> : IDisposable
@@ -52,6 +52,14 @@ namespace VL.Stride.Voxels
 
             public Cachable(
                 ProcessNodeBase<TInstance> node,
+                Action<TInstance, T> setter,
+                T initialValue = default,
+                Func<T, T, bool> equals = default
+            )
+                : this(node, null, setter, initialValue, equals) { }
+
+            public Cachable(
+                ProcessNodeBase<TInstance> node,
                 Func<TInstance, T> getter,
                 Action<TInstance, T> setter,
                 T initialValue = default,
@@ -80,7 +88,7 @@ namespace VL.Stride.Voxels
                 });
             }
 
-            public T Value => _getter(Node.Instance);
+            public T Value => _getter != null ? _getter(Node.Instance) : _lastValue;
 
             public void SetValue(T value)
             {
@@ -103,6 +111,13 @@ namespace VL.Stride.Voxels
 
             public CachableList(
                 ProcessNodeBase<TInstance> node,
+                Action<TInstance, IList<T>> setter,
+                IReadOnlyList<T> initialValue = null
+            )
+                : this(node, null, setter, initialValue) { }
+
+            public CachableList(
+                ProcessNodeBase<TInstance> node,
                 Func<TInstance, IList<T>> getter,
                 Action<TInstance, IList<T>> setter = null,
                 IReadOnlyList<T> initialValue = null
@@ -113,7 +128,8 @@ namespace VL.Stride.Voxels
                 _setter = setter;
 
                 // Use the provided initial value, or fallback to the instance's default list
-                _lastValue = initialValue ?? getter(node.Instance)?.ToList() ?? new List<T>();
+                _lastValue =
+                    initialValue ?? getter?.Invoke(node.Instance)?.ToList() ?? new List<T>();
 
                 // Defines how to apply the list
                 Action<TInstance> applyList = instance =>
@@ -127,7 +143,7 @@ namespace VL.Stride.Voxels
                                     list.Add(item);
                         _setter(instance, list);
                     }
-                    else
+                    else if (_getter != null)
                     {
                         var current = _getter(instance);
                         current.Clear();

@@ -1,13 +1,13 @@
 ﻿using Stride.Rendering.Voxels;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxels.Lights.LightTypes
+namespace VL.Stride.Rendering.Voxels.Marching
 {
     /// <summary>
     /// Cone marcher that traces per mipmap level.
     /// </summary>
     [ProcessNode(Name = "VoxelMarchConePerMipmap")]
-    public class VoxelMarchConePerMipmapNode : VoxelNodeImmutable<VoxelMarchConePerMipmap>
+    public class VoxelMarchConePerMipmapNode : ProcessNodeBase<VoxelMarchConePerMipmap>
     {
         private readonly Cachable<int> _steps;
         private readonly Cachable<float> _coneRatio;

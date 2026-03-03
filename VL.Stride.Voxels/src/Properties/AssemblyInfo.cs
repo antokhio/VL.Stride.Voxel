@@ -1,3 +1,6 @@
 using VL.Core.Import;
 
-[assembly: ImportAsIs(Namespace = "VL.Stride.Voxels", Category = "Stride.Voxels")]
+[assembly: ImportAsIs(
+    Namespace = "VL.Stride.Rendering.Voxels",
+    Category = "Stride.Rendering.Voxels"
+)]

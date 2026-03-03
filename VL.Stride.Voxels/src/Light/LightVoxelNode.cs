@@ -2,7 +2,7 @@
 using Stride.Rendering.Voxels.VoxelGI;
 using VL.Core.Import;
 
-namespace VL.Stride.Voxels.Lights.LightTypes
+namespace VL.Stride.Rendering.Voxels.Light
 {
     /// <summary>
     /// Voxel-based environment light using diffuse and specular marchers.

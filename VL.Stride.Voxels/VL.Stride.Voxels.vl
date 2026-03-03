@@ -2,7 +2,7 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="KHDGkpUdRLcPTpg8lXKIAC" LanguageVersion="2025.7.1-0174-g187f627d60" Version="0.128">
   <NugetDependency Id="Fad98Medm4gO0dDvcYcve0" Location="VL.CoreLib" Version="2025.7.1-0174-g187f627d60" />
   <Patch Id="TKsjNou4Fu0MEU6TNVj627">
-    <Canvas Id="E9xaN8Yr7alNnH71sXCwpk" DefaultCategory="Stride.Voxels" CanvasType="FullCategory">
+    <Canvas Id="E9xaN8Yr7alNnH71sXCwpk" DefaultCategory="Stride.Rendering.Voxels" CanvasType="FullCategory">
       <!--
 
     ************************ VoxelsCompositor ************************
@@ -3121,6 +3121,68 @@
           <Link Id="Lytv39LAoiZMM2mcIJdPhY" Ids="APSeIARplQEMBWtbO5v0AN,U8MYFAiq3FeNsW2QPyHwN2" />
         </Patch>
       </Node>
+      <Canvas Id="JywHQPwOpKPO6UAEz6Wb17" Name="Marching" Position="128,180">
+        <!--
+
+    ************************ VoxelMarchBeam ************************
+
+-->
+        <Node Name="VoxelMarchBeam" Bounds="321,210" Id="QCjFbdBfe6NPTPxBpxIG0J">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+            <Choice Kind="TypeFlag" Name="VoxelMarchBeam" />
+            <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+            <AssemblyReference ID="Stride.Voxels.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="LzztMpKKu5LMmLT4pLw8EY">
+            <Canvas Id="EaKWo7wWfovOW9XpOOFZpZ" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="NuQYTMNKc16OFoQVjAzgPd" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ VoxelMarchCone ************************
+
+-->
+        <Node Name="VoxelMarchCone" Bounds="325,248" Id="PUjbGidftk9PdnyriLwcEg">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+            <Choice Kind="TypeFlag" Name="VoxelMarchCone" />
+            <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+            <AssemblyReference ID="Stride.Voxels.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="BZtlCFOInbpLlgYUO6buAP">
+            <Canvas Id="PfsF0lIgQXQLacegeaZRZm" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="DJJEcZErahXPt5LSqo7lFj" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ VoxelMarchConePerMipmap ************************
+
+-->
+        <Node Name="VoxelMarchConePerMipmap" Bounds="325,287" Id="DQcaMfRUJvuMHQnLEG22E0">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+            <Choice Kind="TypeFlag" Name="VoxelMarchConePerMipmap" />
+            <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+            <AssemblyReference ID="Stride.Voxels.dll" />
+          </p:TypeAnnotation>
+          <Patch Id="MFtGnVSNSl0PxE4Ea7cNmF">
+            <Canvas Id="EvY7zGEHqdSLAMCJYIrEdg" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="PtOSd8MDk7LQKpdS2qRFQB" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
     </Canvas>
     <!--
 
