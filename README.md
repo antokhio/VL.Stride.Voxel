@@ -43,9 +43,9 @@ nuget install Stride.Voxels -Version 4.2.1.2487 -DependencyVersion Ignore
 
 ## Credits
 
-- [tebjan](https://github.com/tebjan) -- all the heavy lifting to assemble a working example.
-- [bj-rn](https://github.com/bj-rn) -- maintaining the branch.
-- [antokhio](https://github.com/antokhio) -- aligning the code with the vvvv API.
+- [tebjan](https://github.com/tebjan) - all the heavy lifting to assemble a working example.
+- [bj-rn](https://github.com/bj-rn) - maintaining the branch.
+- [antokhio](https://github.com/antokhio) - aligning the code with the vvvv API.
 
 ## License
 
