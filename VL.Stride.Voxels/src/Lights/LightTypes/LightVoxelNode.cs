@@ -8,7 +8,7 @@ namespace VL.Stride.Voxels.Lights.LightTypes
     /// Voxel-based environment light using diffuse and specular marchers.
     /// </summary>
     [ProcessNode(Name = "LightVoxel")]
-    public class LightVoxelNode : VoxelNodeMutable<LightVoxel>
+    public class LightVoxelNode : ProcessNodeBase<LightVoxel>
     {
         private readonly Cachable<VoxelVolumeComponent> _volume;
         private readonly Cachable<int> _attributeIndex;
