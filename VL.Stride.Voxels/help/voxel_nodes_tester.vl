@@ -221,6 +221,34 @@
             <Pin Id="SECbHEc7Le1MVShkuepDB4" Name="Enabled" Kind="OutputPin" />
           </Node>
           <Pad Id="Cg1OcYUAAY6LafFgOFWkCw" Comment="Enabled" Bounds="1217,890,35,35" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="1871,551,139,19" Id="Dhm8HlPQvpGMzH8NmVuncL">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelizationMethodTriAxis" />
+            </p:NodeReference>
+            <Pin Id="HPK12WF6EnJOXLvXcBhQBX" Name="Multisample Count" Kind="InputPin" />
+            <Pin Id="L3r9Yf2gmoHNAwL8Pui8uN" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1880,611,154,19" Id="G0dz7ONXaueLxTBi2LiLzT">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VoxelizationMethodSingleAxis" />
+            </p:NodeReference>
+            <Pin Id="SudVGfoJZa6M5IvEZl2bES" Name="Voxelization Axis" Kind="InputPin" />
+            <Pin Id="HnZ4Y3XqyZrPBmqblOkEwh" Name="Multisample Count" Kind="InputPin" DefaultValue="X8" />
+            <Pin Id="QBd79HxIo94N3PwH5CVaxh" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1880,661,124,26" Id="LNu4WsQs0LqL4GQ2NKTcAl">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod.VoxelizationMethodSingleAxis" LastDependency="VL.Stride.Voxels.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelizationMethod.VoxelizationMethodSingleAxis" />
+              <Choice Kind="OperationCallFlag" Name="MultisampleCount" />
+            </p:NodeReference>
+            <Pin Id="Ti6APYFkOM4MiIa7PcDQ4u" Name="Input" Kind="StateInputPin" />
+            <Pin Id="NSLlEUPJL7iPZ2dG89HRno" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="EeVkW66CoYNMzOWbcaKgIM" Name="Multisample Count" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JCdeHlmMND0L6VPucPg1rc" Comment="Multisample Count" Bounds="2001,710,54,15" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="DBAQfpxtb8JOLfJJGk6dxY" Name="Create" />
         <Patch Id="FWPEUIdqfJkPcyIZpwpvWs" Name="Update" />
@@ -241,6 +269,8 @@
         <Link Id="IXFfqcfpDx2Mtm6LvMfJwg" Ids="Nzw6pwDIWPWPhmcSAZskEH,SrqDXsmUttnQU6fxg4aU88" />
         <Link Id="EYxFwuy6P5mP61dCxTEZ1R" Ids="FCYQn6jLBQIQDxy0bfBwsd,EMk0eLzE52bLFiE4tPkOkT" />
         <Link Id="CyClgPm1YCUMH61FCj2yAy" Ids="SECbHEc7Le1MVShkuepDB4,Cg1OcYUAAY6LafFgOFWkCw" />
+        <Link Id="VgVxEr6I8HlQTg7ZmuYNsk" Ids="QBd79HxIo94N3PwH5CVaxh,Ti6APYFkOM4MiIa7PcDQ4u" />
+        <Link Id="KjBM2XA4Z57OH6AZ6UAulo" Ids="EeVkW66CoYNMzOWbcaKgIM,JCdeHlmMND0L6VPucPg1rc" />
       </Patch>
     </Node>
   </Patch>

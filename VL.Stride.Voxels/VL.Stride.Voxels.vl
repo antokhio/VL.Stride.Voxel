@@ -3682,6 +3682,68 @@
             </Patch>
           </Node>
         </Canvas>
+        <Canvas Id="D94iB584qvhOua2mmSb19D" Name="VoxelizationMethod" Position="1349,340">
+          <!--
+
+    ************************ VoxelizationMethodDominantAxis ************************
+
+-->
+          <Node Name="VoxelizationMethodDominantAxis" Bounds="571,223" Id="ORbSL9MsnE5MW0SYDptydE">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+              <Choice Kind="TypeFlag" Name="VoxelizationMethodDominantAxis" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+              <AssemblyReference ID="Stride.Voxels.dll" />
+            </p:TypeAnnotation>
+            <Patch Id="T9rxWntfAV6ONnMur8ID96">
+              <Canvas Id="Ku61u94Fpo0NvgWwBp0GM6" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="QXMomAcEbLVMqhfVbO4Rp7" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VoxelizationMethodSingleAxis ************************
+
+-->
+          <Node Name="VoxelizationMethodSingleAxis" Bounds="571,273" Id="Fx2GeMXk16fNYjfRWgdoGb">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+              <Choice Kind="TypeFlag" Name="VoxelizationMethodSingleAxis" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+              <AssemblyReference ID="Stride.Voxels.dll" />
+            </p:TypeAnnotation>
+            <Patch Id="TirNn2BRzGEL3bZwi7HLO2">
+              <Canvas Id="PH2eSTvQ9LgL2fvIZcnuDd" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="EOgTLPlKbznNBnMWF10drJ" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VoxelizationMethodTriAxis ************************
+
+-->
+          <Node Name="VoxelizationMethodTriAxis" Bounds="571,323" Id="ST54XptWyTkOYQGAkQm3Le">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="Stride.Voxels.dll">
+              <Choice Kind="TypeFlag" Name="VoxelizationMethodTriAxis" />
+              <FullNameCategoryReference ID="Stride.Rendering.Voxels" />
+              <AssemblyReference ID="Stride.Voxels.dll" />
+            </p:TypeAnnotation>
+            <Patch Id="LuOPEhbV9IDQOjSlChwTMJ">
+              <Canvas Id="I5rd45Bg5MFLwtpNZPcUFt" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="R19oX7GRJ1QND5hzmOx0dL" IsHidden="true" />
+            </Patch>
+          </Node>
+        </Canvas>
       </Canvas>
     </Canvas>
     <!--
