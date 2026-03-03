@@ -1,0 +1,54 @@
+﻿using Stride.Rendering.Voxels;
+using VL.Core.Import;
+using static Stride.Rendering.Voxels.VoxelLayoutBase;
+
+namespace VL.Stride.Rendering.Voxels.Voxelization.Layout
+{
+    [ProcessNode]
+    public abstract class VoxelLayoutBaseNode<TInstance> : ProcessNodeBase<TInstance>
+        where TInstance : VoxelLayoutBase, new()
+    {
+        private readonly Cachable<float> _maxBrightness;
+        private readonly Cachable<IVoxelStorageMethod> _storageMethod;
+        private readonly Cachable<StorageFormats> _storageFormat;
+
+        public VoxelLayoutBaseNode()
+        {
+            _maxBrightness = new(this, (x, v) => x.maxBrightness = v, 10.0f);
+            _storageMethod = new(
+                this,
+                (x, v) => x.StorageMethod = v,
+                new VoxelStorageMethodIndirect()
+            );
+            _storageFormat = new(this, (x, v) => x.StorageFormat = v, StorageFormats.RGBA16F);
+        }
+
+        public void SetMaxBrightness(float maxBrightness = 10.0f) =>
+            _maxBrightness.SetValue(maxBrightness);
+
+        public void SetStorageMethod(IVoxelStorageMethod storageMethod) =>
+            _storageMethod.SetValue(storageMethod);
+
+        public void SetStorageFormat(StorageFormats storageFormat = StorageFormats.RGBA16F) =>
+            _storageFormat.SetValue(storageFormat);
+    }
+
+    /// <summary>
+    /// Anisotropic voxel layout storing directional data.
+    /// </summary>
+    [ProcessNode(Name = "VoxelLayoutAnisotropic")]
+    public class VoxelLayoutAnisotropicNode : VoxelLayoutBaseNode<VoxelLayoutAnisotropic> { }
+
+    /// <summary>
+    /// Paired anisotropic voxel layout storing opposing directional data.
+    /// </summary>
+    [ProcessNode(Name = "VoxelLayoutAnisotropicPaired")]
+    public class VoxelLayoutAnisotropicPairedNode
+        : VoxelLayoutBaseNode<VoxelLayoutAnisotropicPaired> { }
+
+    /// <summary>
+    /// Isotropic voxel layout storing omnidirectional data.
+    /// </summary>
+    [ProcessNode(Name = "VoxelLayoutIsotropic")]
+    public class VoxelLayoutIsotropicNode : VoxelLayoutBaseNode<VoxelLayoutIsotropic> { }
+}
