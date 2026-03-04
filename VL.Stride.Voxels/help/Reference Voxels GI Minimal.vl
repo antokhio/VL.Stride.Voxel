@@ -1107,7 +1107,7 @@
       </p:NodeReference>
       <Patch Id="K8BfLktqmB2NF5EGvV756O">
         <Canvas Id="DvfEmmfKeexK9pW0hw8WTN" CanvasType="Group">
-          <Node Bounds="858,1050,205,19" Id="F36wzFy8sJDPXqED8n9P9T">
+          <Node Bounds="349,740,205,19" Id="F36wzFy8sJDPXqED8n9P9T">
             <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow (Voxels)" />
@@ -1152,7 +1152,7 @@
             <Pin Id="J9W6jLC1y0QLzcU2gMbmgT" Name="Bind Opaque As Resource During Transparent Rendering" Kind="InputPin" IsHidden="true" />
             <Pin Id="KSxC4YjhN9hPyvZP1lNrZ6" Name="Debug Voxels" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="855,840,65,19" Id="M670fyDi7kLMF5HsGtgEPV">
+          <Node Bounds="349,530,65,19" Id="M670fyDi7kLMF5HsGtgEPV">
             <p:NodeReference LastCategoryFullName="Main" LastDependency="voxel2.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="StageCube" />
@@ -1160,7 +1160,7 @@
             <Pin Id="QasueqeZgSZPy2ukW7Rqns" Name="Output" Kind="OutputPin" />
             <Pin Id="PsxOSH6QFe2MZfTT0H8Pjr" Name="Node Context" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="858,970,85,19" Id="ISNeBexmPPCOWWyBrY9tJV">
+          <Node Bounds="349,660,85,19" Id="ISNeBexmPPCOWWyBrY9tJV">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
@@ -1175,7 +1175,7 @@
             <Pin Id="FQL0F8vgQBXNaPHZ0t2Si5" Name="Enabled" Kind="InputPin" />
             <Pin Id="Odzd5rMSJOtLYuJ79XwUJA" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="878,900,67,19" Id="IUB9uYssTCnPYkIwWgUVQ3">
+          <Node Bounds="369,610,67,19" Id="IUB9uYssTCnPYkIwWgUVQ3">
             <p:NodeReference LastCategoryFullName="Main" LastDependency="voxel2.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SomeScene" />
@@ -1183,7 +1183,7 @@
             <Pin Id="SxMPWhhwimZOXDR30gZVSP" Name="Entity" Kind="OutputPin" />
             <Pin Id="PAmf42fv7ArNS0jZI7POxc" Name="Node Context" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="1201,830,105,19" Id="KSh8KyvLQ2bPmYQy3UKLvm">
+          <Node Bounds="467,573,105,19" Id="KSh8KyvLQ2bPmYQy3UKLvm">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
@@ -1200,7 +1200,7 @@
             <Pin Id="ERjgwdlxr3lLG6aud1crpE" Name="Output" Kind="OutputPin" />
             <Pin Id="Mkb4LsrDRRHLxetSoglyxb" Name="Patched Entity" Kind="InputPin" />
           </Node>
-          <Node Bounds="1221,787,39,19" Id="SggZg3t6kQ7O51TjeCZwYk">
+          <Node Bounds="487,530,39,19" Id="SggZg3t6kQ7O51TjeCZwYk">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
@@ -1210,7 +1210,7 @@
             <Pin Id="Dn7L2GaIldUP5AcmQo9H0o" Name="Result" Kind="OutputPin" />
             <Pin Id="BmRHuJJjYKlMeVCzHvWGe5" Name="Input 2" Kind="InputPin" />
           </Node>
-          <Node Bounds="1353,620,123,19" Id="RCxv8SRnHIhPPtqsOGioq3">
+          <Node Bounds="521,469,123,19" Id="RCxv8SRnHIhPPtqsOGioq3">
             <p:NodeReference LastCategoryFullName="Stride.Lights" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="LightComponent" />
@@ -1220,7 +1220,7 @@
             <Pin Id="DZrhEg5ZPHKMyCp70N98rG" Name="Enabled" Kind="InputPin" DefaultValue="True" />
             <Pin Id="TDPPgz6LZ71OflX7LqXiz6" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1353,561,105,19" Id="MeAg9PcSfVnOse40cI6PdS">
+          <Node Bounds="521,410,105,19" Id="MeAg9PcSfVnOse40cI6PdS">
             <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Light" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <FullNameCategoryReference ID="Stride.Rendering.Voxels.Light" />
@@ -1234,7 +1234,7 @@
             <Pin Id="HLTZ54QMfKDNS4HL1OAtqa" Name="Specular Intensity Scale" Kind="InputPin" />
             <Pin Id="S0eUETYr9jSPFujgLVc1gZ" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1221,451,205,19" Id="UnwXa5Y9Y3iPKDiQFJ08Wl">
+          <Node Bounds="487,331,205,19" Id="UnwXa5Y9Y3iPKDiQFJ08Wl">
             <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="VoxelVolumeComponent" />
@@ -1252,7 +1252,7 @@
             <Pin Id="Q6BP60cwJq2Mamf3XAZmlj" Name="Enabled" Kind="InputPin" />
             <Pin Id="OD2BRTtUXBYQca0QZXOnqb" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1287,370,39,19" Id="JlFDRzb5EkxOs0n7tlafvq">
+          <Node Bounds="547,280,39,19" Id="JlFDRzb5EkxOs0n7tlafvq">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -1261,7 +1261,7 @@
             <Pin Id="KDpCpBb1zmhPgwg1Jn2odV" Name="Input" Kind="InputPin" />
             <Pin Id="Imt46PT2rnGMJ8cZxpqnUa" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1295,280,157,19" Id="HFbeU0TDqITNgAKYA38JWg">
+          <Node Bounds="547,220,157,19" Id="HFbeU0TDqITNgAKYA38JWg">
             <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.Attributes" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="VoxelAttributeEmissionOpacity" />
@@ -1271,7 +1271,7 @@
             <Pin Id="BSeEPNsESRnNpAz7AAiQ4Y" Name="Light Falloff" Kind="InputPin" />
             <Pin Id="QZ2D8niQ7t1LukstA5mca1" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1373,180,208,19" Id="SgTyByTDc4yLzsNb2L0waA">
+          <Node Bounds="623,120,208,19" Id="SgTyByTDc4yLzsNb2L0waA">
             <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.Modifiers.EmissionOpacityFilters" LastDependency="VL.Stride.Voxels.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="VoxelModifierEmissionOpacityAntiAliasing" />
@@ -1279,7 +1279,7 @@
             <Pin Id="Pp9El8Szn3WO98iYSnXGWl" Name="Enabled" Kind="InputPin" DefaultValue="True" />
             <Pin Id="RyywJJoaAvbPFZYU12XFZH" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1373,230,39,19" Id="DIuZFxr6dWGNxAdHSVg7db">
+          <Node Bounds="623,170,39,19" Id="DIuZFxr6dWGNxAdHSVg7db">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
