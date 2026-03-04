@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.Stride.Voxels</id>
+    <title>VL.Stride.Voxels</title>
+    <version>0.0.0</version>
+    <authors>antokhio, tebjan, bj-rn</authors>
+    <owners>antokhio</owners>
+    <projectUrl>https://github.com/antokhio/VL.Stride.Voxels</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>An integration package for vvvv gamma that brings advanced voxel rendering and compositing capabilities to the visual programming environment using the Stride 3D engine.</summary>
+    <description>This library acts as a bridge, exposing the Stride.Voxels functionality as VL nodes. It allows developers and creative coders working in vvvv gamma to implement voxel-based Stride rendering techniques natively within their node-based workflows.</description>
+    <tags>vl vvvv gamma stride stride3d voxels vxgi voxel-cone-tracing</tags>
+    <readme>README.md</readme>
+    <license type="file">LICENSE</license>
+    <icon>icon\icon.png</icon>
+    <dependencies>
+      <group targetFramework=".net8.0">
+        <dependency id="Stride.Voxels" version="4.2.1.2487"/>
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\VL.Stride.Voxels\lib\net8.0\**" target="lib\net8.0\" exclude="" />
+    <file src="..\VL.Stride.Voxels\shaders\**" target="shaders\" exclude="" />
+    <file src="..\VL.Stride.Voxels\*.vl" target="" exclude="" />
+    <file src="..\VL.Stride.Voxels\help\**" target="help\" exclude="" />
+    <file src="..\icon.png" target="icon\" />
+    <file src="..\README.md" />
+    <file src="..\LICENSE" />
+  </files>
+</package>

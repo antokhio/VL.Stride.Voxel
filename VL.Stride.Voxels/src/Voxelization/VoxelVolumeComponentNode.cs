@@ -10,6 +10,8 @@ namespace VL.Stride.Rendering.Voxels.Voxelization
     [ProcessNode(Name = "VoxelVolumeComponent")]
     public class VoxelVolumeComponentNode : ProcessNodeBase<VoxelVolumeComponent>
     {
+        protected override bool IsImmutable => false;
+
         private readonly Cachable<bool> _voxelize;
         private readonly Cachable<IVoxelizationMethod> _voxelizationMethod;
         private readonly Cachable<IVoxelStorage> _storage;

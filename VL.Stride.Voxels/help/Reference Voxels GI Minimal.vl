@@ -1175,28 +1175,6 @@
             <Pin Id="FQL0F8vgQBXNaPHZ0t2Si5" Name="Enabled" Kind="InputPin" />
             <Pin Id="Odzd5rMSJOtLYuJ79XwUJA" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="1248,1070,205,19" Id="N9tOgaRU6VTNGHyYf2mQEs">
-            <p:NodeReference LastCategoryFullName="Stride.Lights" LastDependency="VL.Stride.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="SkyboxLight" />
-            </p:NodeReference>
-            <Pin Id="SuayJXdphDmQMDslYLqDnM" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="QDRnWCVdCIkOSkjEK7D7gV" Name="Transformation" Kind="InputPin" />
-            <Pin Id="IlIFpSohBqcQCMgDnDOHQT" Name="Cube Map" Kind="InputPin" />
-            <Pin Id="KdDHgVY9aahL2230xlsC5m" Name="Is Specular Only" Kind="InputPin" />
-            <Pin Id="UK7k4hbsMQJOzOeqNaXEQl" Name="Intensity" Kind="InputPin" />
-            <Pin Id="TpgbUWQVqGUOBGhbAkj1Pm" Name="Diffuse SHOrder" Kind="InputPin" IsHidden="true" />
-            <Pin Id="KTyywu5ik5rNpp8baMJVdH" Name="Specular Cube Map Size" Kind="InputPin" IsHidden="true" />
-            <Pin Id="QWFDcalEAUBNNH2mHLCLe8" Name="Force Build" Kind="InputPin" />
-            <Pin Id="CjPa6w6jDJANAaU1kv0ru7" Name="Background Intensity" Kind="InputPin" />
-            <Pin Id="DTNO22GrbEYOvJtPHany11" Name="Background Enabled" Kind="InputPin" />
-            <Pin Id="GNkoYehR0PLPoLQCzlIyWk" Name="Component" Kind="InputPin" />
-            <Pin Id="IIHIFwtLm5nPBaypCTFdvA" Name="Children" Kind="InputPin" />
-            <Pin Id="DyXAAhztlhROODmXKBmdMo" Name="Name" Kind="InputPin" />
-            <Pin Id="EzDneMnEsHaOfwdhlryC8B" Name="Enabled" Kind="InputPin" />
-            <Pin Id="Fh3O8Ag0pZzQLYdWQOS4o4" Name="Output" Kind="OutputPin" IsHidden="true" />
-            <Pin Id="TAK7x9QPCfRM8NQvJtNu3m" Name="Entity" Kind="OutputPin" />
-          </Node>
           <Node Bounds="878,900,67,19" Id="IUB9uYssTCnPYkIwWgUVQ3">
             <p:NodeReference LastCategoryFullName="Main" LastDependency="voxel2.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1268,21 +1246,11 @@
             <Pin Id="Hf1bsvJiHUuMn91RO12ex1" Name="Voxel Volume Size" Kind="InputPin" />
             <Pin Id="KurRLmtA0I6MFCxEEpwDgL" Name="Aproximate Voxel Size" Kind="InputPin" />
             <Pin Id="V6f4j5V6ZLVNhtVwGf6bI4" Name="Voxel Grid Snapping" Kind="InputPin" />
-            <Pin Id="FZfah0rTONQPNM1UU7pVZR" Name="Visualize Voxels" Kind="InputPin" />
-            <Pin Id="AL9NkZm73nMO0RmfIP5DvS" Name="Visualize Index" Kind="InputPin" />
+            <Pin Id="FZfah0rTONQPNM1UU7pVZR" Name="Visualize Voxels" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="AL9NkZm73nMO0RmfIP5DvS" Name="Visualize Index" Kind="InputPin" DefaultValue="0" />
             <Pin Id="EJFy9K76IZ5NUFkSSbFRhd" Name="Visualization" Kind="InputPin" />
             <Pin Id="Q6BP60cwJq2Mamf3XAZmlj" Name="Enabled" Kind="InputPin" />
             <Pin Id="OD2BRTtUXBYQca0QZXOnqb" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="1092,551,105,26" Id="IlC2qeMFGT7O4ufZCMA5ZL">
-            <p:NodeReference LastCategoryFullName="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" LastDependency="VL.Stride.Voxels.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <FullNameCategoryReference ID="Stride.Rendering.Voxels.Voxelization.VoxelVolumeComponent" />
-              <Choice Kind="OperationCallFlag" Name="Attributes" />
-            </p:NodeReference>
-            <Pin Id="HlvwDoWlRlZNQU7XEwUVFU" Name="Input" Kind="StateInputPin" />
-            <Pin Id="VO9cezvdeTJPN8P6M8N8QB" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="HToENo0riKqPV2QnYbU7aI" Name="Attributes" Kind="OutputPin" />
           </Node>
           <Node Bounds="1287,370,39,19" Id="JlFDRzb5EkxOs0n7tlafvq">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
@@ -1308,7 +1276,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="VoxelModifierEmissionOpacityAntiAliasing" />
             </p:NodeReference>
-            <Pin Id="Pp9El8Szn3WO98iYSnXGWl" Name="Enabled" Kind="InputPin" />
+            <Pin Id="Pp9El8Szn3WO98iYSnXGWl" Name="Enabled" Kind="InputPin" DefaultValue="True" />
             <Pin Id="RyywJJoaAvbPFZYU12XFZH" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="1373,230,39,19" Id="DIuZFxr6dWGNxAdHSVg7db">
@@ -1335,7 +1303,6 @@
         <Link Id="SXpIphCXBPXLWEBea7ppVf" Ids="TDPPgz6LZ71OflX7LqXiz6,BmRHuJJjYKlMeVCzHvWGe5" />
         <Link Id="PKIIihgFj8DOih1pUBxHC8" Ids="OD2BRTtUXBYQca0QZXOnqb,DZDwoLhxfTQOEdUBKbPmMN" />
         <Link Id="QOixqGJfCedPyT9kvSBQ9F" Ids="OD2BRTtUXBYQca0QZXOnqb,CXdpuIh9BltPhLRzZhndVI" />
-        <Link Id="SZPv82ulMnzLzwKLA8VTmv" Ids="OD2BRTtUXBYQca0QZXOnqb,HlvwDoWlRlZNQU7XEwUVFU" />
         <Link Id="EmukfxTBqszNJLE2POkSPz" Ids="QZ2D8niQ7t1LukstA5mca1,KDpCpBb1zmhPgwg1Jn2odV" />
         <Link Id="PZ0V3LQ2ODiMtimLFei84U" Ids="Imt46PT2rnGMJ8cZxpqnUa,SaBJt3fMMfpLX7s0T9OyYA" />
         <Link Id="AeHZ6Xejf5VOaRLuDIubG0" Ids="RyywJJoaAvbPFZYU12XFZH,Mak3YkPPzIaQPqFn8zIhyC" />

@@ -1,1 +1,8 @@
+# Ignore generated shaders
 shaders/*
+
+# Ignore generated dlls
+lib/*
+
+# Ignore generated runtime artifacts
+runtime/*

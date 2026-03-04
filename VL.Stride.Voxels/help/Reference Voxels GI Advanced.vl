@@ -2329,7 +2329,7 @@
               <Choice Kind="ProcessAppFlag" Name="SceneWindow (Voxels)" />
             </p:NodeReference>
             <Pin Id="QvEd6SkeCRTNfogo1hxddV" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="SGcjICwUgE2Ls0vkDuGvV0" Name="Bounds" Kind="InputPin" DefaultValue="-1590, 62, 786, 432" IsHidden="true" />
+            <Pin Id="SGcjICwUgE2Ls0vkDuGvV0" Name="Bounds" Kind="InputPin" DefaultValue="457, 261, 1488, 1081" IsHidden="true" />
             <Pin Id="Eusbvap20KvQEKHa5LfbZV" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
             <Pin Id="QF5SXf7fqQuLzYHIuuEewM" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
             <Pin Id="CnL5FZZALgzNa0vu63pr5v" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
