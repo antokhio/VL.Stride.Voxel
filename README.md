@@ -18,10 +18,19 @@ This project brings [Voxel Cone Tracing Global Illumination](https://doc.stride3
 
 ### Installation
 
+As for now you have to install **two** packages manually:
+
 ```sh
-// vvvv
+// vl nuget
 nuget install VL.Stride.Voxels
+
+// install stride nuget without packages that are already included in vvvv
+nuget install Stride.Voxels -Version 4.2.1.2487 -DependencyVersion Ignore
 ```
+
+Compatible with **>= vvvv_gamma_7.1-0174**
+
+**Notice**: stride version should match the one vvvv is using, if you are on pre-release vvvv version [check StrideVersion](https://github.com/vvvv/VL.StandardLibs/blob/main/Directory.Packages.props). If you are on stable release, check your vvvv About.
 
 ### Getting Started
 
@@ -32,14 +41,6 @@ Help patches for [vvvv](https://vvvv.org) are available via the Help Browser und
 Contributions are welcome!
 Open [issues](https://github.com/antokhio/VL.Stride.Voxels/issues) or submit pull requests.
 Questions are welcome on the [vvvv forum](https://forum.vvvv.org).
-
-## Troubleshooting
-
-If you experience dependency issues or version mismatches with the Stride engine while installing, you can try explicitly installing the underlying Voxels package and ignoring dependencies:
-
-```sh
-nuget install Stride.Voxels -Version 4.2.1.2487 -DependencyVersion Ignore
-```
 
 ## Known issues
 
